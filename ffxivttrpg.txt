@@ -1,0 +1,1487 @@
+<div class="backdrop">
+    <div class="char-section boxed">
+        <div class="flex">
+            <div class="">
+                <img class="token" name="attr_character_token" />
+            </div>
+            <div class="flex col name-section">
+                <div>Name / Race</div>
+                <div class="flex row name-section-inputs">
+                    <div class="name-section-input">
+                        <span name="attr_character_name"></span>
+                    </div>
+                    <div>
+                        <select class="race-select" name="attr_race">
+                            <option value="hyur">Hyur</option>
+                            <option value="miqote">Miq O'te</option>
+                            <option value="elezen">Elezen</option>
+                            <option value="roegadyn">Roegadyn</option>
+                            <option value="lalafell">Lalafell</option>
+                            <option value="viera">Viera</option>
+                            <option value="hrothgar">Hrothgar</option>
+                            <option value="garlean">Garlean</option>
+                            <option value="moogle">Moogle</option>
+                            <option value="bangaa">Bangaa</option>
+                            <option value="seeq">Seeq</option>
+                            <option value="garif">Garif</option>
+                        </select>
+                         
+                    </div>
+                </div>
+                <div class="flex">
+                    <div>
+                        <span>Job:</span>
+                        <select class="level-select" name="attr_level">
+                            <option value="30">LV30</option>
+                            <option value="40">LV40</option>
+                            <option value="50">LV50</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select class="job-select" name="attr_job">
+                            <option value="blm">Black Mage</option>
+                            <option value="drg">Dragoon</option>
+                            <option value="whm">White Mage</option>
+                            <option value="war">Warrior</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="attribute-section">
+        <div>
+            <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+            <div class="attr-edit-button">
+                <button type="action" name="act_edit_attributes">Edit</button>
+            </div>
+            <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+            <div class="attr-done-button">
+                <button type="action" name="act_edit_attributes">Done</button>
+            </div>
+        </div>
+        <div class="flex row attr-section hide-overflow">
+            <div class="flex col attr-col">
+                <span>Primary Attributes</span>
+                <!-- STR Attribute -->
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-edit">
+                    <span>STR</span>
+                    <input class="attribute-input" type="number" name="attr_str" value="5" />
+                </div>
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-display">
+                    <button class="attr-button" type="action" name="act_str">
+                        <span class="attribute-button-text">STR</span>
+                        <span class="attribute-button-text" name="attr_str"></span>
+                    </button>
+                </div>
+                <!-- DEX Attribute -->
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-edit">
+                    <span>DEX</span>
+                    <input class="attribute-input" type="number" name="attr_dex" value="4" />
+                </div>
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-display">
+                    <button class="attr-button" type="action" name="act_dex">
+                        <span class="attribute-button-text">DEX</span>
+                        <span class="attribute-button-text" name="attr_dex"></span>
+                    </button>
+                </div>
+                <!-- VIT Attribute -->
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-edit">
+                    <span>VIT</span>
+                    <input class="attribute-input" type="number" name="attr_vit" value="2" />
+                </div>
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-display">
+                    <button class="attr-button" type="action" name="act_vit">
+                        <span class="attribute-button-text">VIT</span>
+                        <span class="attribute-button-text" name="attr_vit"></span>
+                    </button>
+                </div>
+                <!-- INT Attribute -->
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-edit">
+                    <span>INT</span>
+                    <input class="attribute-input" type="number" name="attr_int" value="1" />
+                </div>
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-display">
+                    <button class="attr-button" type="action" name="act_int">
+                        <span class="attribute-button-text">INT</span>
+                        <span class="attribute-button-text" name="attr_int"></span>
+                    </button>
+                </div>
+                <!-- MND Attribute -->
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-edit">
+                    <span>MND</span>
+                    <input class="attribute-input" type="number" name="attr_mnd" value="1" />
+                </div>
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-display">
+                    <button class="attr-button" type="action" name="act_mnd">
+                        <span class="attribute-button-text">MND</span>
+                        <span class="attribute-button-text" name="attr_mnd"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="flex col attr-col attr-col-second">
+                <span>Secondary Attributes</span>
+                <!-- Defense Attribute -->
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-edit">
+                    <span>Defense</span>
+                    <input class="attribute-input" type="number" name="attr_def" value="1" />
+                </div>
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-display">
+                    <button class="attr-button" type="action" name="act_def">
+                        <span class="attribute-button-text-secondary">Defense</span>
+                        <span class="attribute-button-text-secondary" name="attr_def"></span>
+                    </button>
+                </div>
+                <!-- Magic Defense Attribute -->
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-edit">
+                    <span>Magic Defense</span>
+                    <input class="attribute-input" type="number" name="attr_magdef" value="11" />
+                </div>
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-display">
+                    <button class="attr-button" type="action" name="act_magdef">
+                        <span class="attribute-button-text-secondary">Magic Defense</span>
+                        <span class="attribute-button-text-secondary" name="attr_magdef"></span>
+                    </button>
+                </div>
+                <!-- Vigilance Attribute -->
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-edit">
+                    <span>Vigilance</span>
+                    <input class="attribute-input" type="number" name="attr_vig" value="11" />
+                </div>
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-display">
+                    <button class="attr-button" type="action" name="act_vig">
+                        <span class="attribute-button-text-secondary">Vigilance</span>
+                        <span class="attribute-button-text-secondary" name="attr_vig"></span>
+                    </button>
+                </div>
+                <!-- Speed Attribute -->
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-edit">
+                    <span>Speed</span>
+                    <input class="attribute-input" type="number" name="attr_speed" value="5" />
+                </div>
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-display">
+                    <button class="attr-button" type="action" name="act_speed">
+                        <div class="speed-button-wrapper">
+                            <span class="attribute-button-text-secondary">Speed</span>
+                            <span class="attribute-button-text-secondary" name="attr_speed"></span>
+                            <span class="attribute-button-text-secondary">Squares</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="flex row hide-overflow">
+                <img height="300px" width="200px" name="attr_character_avatar" />
+            </div>
+        </div>
+        <div class="flex resource-wrapper">
+            <div class="resource-box flex">
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="resource-display">
+                    <button type="action" class="mp-button resource-button" name="act_maxmp">
+                        <span class="resource-button-text">MP</span>
+                        <span class="resource-button-text">max</span>
+                        <span class="resource-button-text" name="attr_maxmp"></span>
+                    </button>
+                </div>
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="resource-edit">
+                    <button class="mp-button resource-button cursor-default">
+                        <span class="resource-button-text">MP</span>
+                        <span class="resource-button-text">max</span>
+                        <input class="attribute-input mp-max-input resource-max-input" type="number" name="attr_maxmp" value="5" />
+                    </button>
+                </div>
+                <div class="flex col center">
+                    <div>
+                        <span class="mp-desc">Recover 2 MP at the end of the [Adventurer Step]</span>
+                    </div>
+                    <input class="attribute-input" type="number" name="attr_currentmp" value="5" />
+                </div>
+            </div>
+            <div class="resource-box flex">
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="resource-display">
+                    <button type="action" class="hp-button resource-button" name="act_maxhp">
+                        <span class="resource-button-text">HP</span>
+                        <span class="resource-button-text">max</span>
+                        <span class="resource-button-text" name="attr_maxhp"></span>
+                    </button>
+                </div>
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="resource-edit">
+                    <button class="hp-button resource-button cursor-default">
+                        <span class="resource-button-text">HP</span>
+                        <span class="resource-button-text">max</span>
+                        <input class="attribute-input hp-max-input resource-max-input" type="number" name="attr_maxhp" value="36" />
+                    </button>
+                </div>
+                <div class="hp-current center just-center flex">
+                    <input class="attribute-input" type="number" name="attr_currenthp" value="27" />
+                </div>
+                <div class="hp-barrier center just-center flex">
+                    <input class="attribute-input" type="number" name="attr_currentbarrier" value="0" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex col effects-section">
+        <div class="traits-header">
+            <div class="traits-header-label">
+                Traits & Other Effects
+            </div>
+        </div>
+        <div></div>
+        <div>
+            <div class="display effect-display">
+                <fieldset class="repeating_effects">
+                    <button class="primary-action-button" type="action" name="act_roll">
+                        <div class="ability-title">
+                            <span class="ability-name" name="attr_name"></span>
+                            <span class="ability-tags" name="attr_tags"></span>
+                        </div>
+                        <div class="ability-check-section">
+                            <input type="hidden" name="attr_show-cost" class="show-cost-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Cost:</span>
+                                <span name="attr_cost"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-trigger" class="show-trigger-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Trigger:</span>
+                                <span name="attr_trigger"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-target" class="show-target-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Target:</span>
+                                <span name="attr_target"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-range" class="show-range-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Range:</span>
+                                <span name="attr_range"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-check" class="show-check-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Check:</span>
+                                <span name="attr_check"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-cr" class="show-cr-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>CR:</span>
+                                <span name="attr_cr"></span>
+                            </div>
+                        </div>
+                        <div class="abilities-effect-section">
+                            <div class="ability-row">
+                                <input type="hidden" name="attr_show-base-effect" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Base Effect:</span>
+                                    <span name="attr_base-effect"></span>
+                                </div>
+                            </div>
+                            <div class="ability-row">
+                                <input type="hidden" name="attr_show-direct-hit" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Direct Hit:</span>
+                                    <span name="attr_direct-hit"></span>
+                                </div>
+                            </div>
+                            <div class="ability-row-full">
+                                <input type="hidden" name="attr_show-limitation" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Limitation:</span>
+                                    <span name="attr_limitation"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <div class="abilities-section">
+        <div class="limit-break-section">
+            <button class="primary-action-button" type="action" name="act_limitroll">
+                <div class="ability-title">
+                    <span class="ability-name" name="attr_limit-name"></span>
+                    <span class="ability-tags" name="attr_limit-tags"></span>
+                </div>
+                <div class="ability-check-section">
+                    <input type="hidden" name="attr_limit-show-cost" class="show-cost-checkbox" value="1" />
+                    <div class="ability-display-section">
+                        <span>Cost:</span>
+                        <span name="attr_limit-cost"></span>
+                    </div>
+                    <input type="hidden" name="attr_limit-show-trigger" class="show-trigger-checkbox" value="1" />
+                    <div class="ability-display-section">
+                        <span>Trigger:</span>
+                        <span name="attr_limit-trigger"></span>
+                    </div>
+                    <input type="hidden" name="attr_limit-show-target" class="show-target-checkbox" value="1" />
+                    <div class="ability-display-section">
+                        <span>Target:</span>
+                        <span name="attr_limit-target"></span>
+                    </div>
+                    <input type="hidden" name="attr_limit-show-range" class="show-range-checkbox" value="1" />
+                    <div class="ability-display-section">
+                        <span>Range:</span>
+                        <span name="attr_limit-range"></span>
+                    </div>
+                    <input type="hidden" name="attr_limit-show-check" class="show-check-checkbox" value="1" />
+                    <div class="ability-display-section">
+                        <span>Check:</span>
+                        <span name="attr_limit-check"></span>
+                    </div>
+                    <input type="hidden" name="attr_limit-show-cr" class="show-cr-checkbox" value="1" />
+                    <div class="ability-display-section">
+                        <span>CR:</span>
+                        <span name="attr_limit-cr"></span>
+                    </div>
+                </div>
+                <div class="abilities-effect-section">
+                    <div class="ability-row">
+                        <input type="hidden" name="attr_limit-show-base-effect" class="show-checkbox" value="1" />
+                        <div class="ability-row-full">
+                            <span>Base Effect:</span>
+                            <span name="attr_limit-base-effect"></span>
+                        </div>
+                    </div>
+                    <div class="ability-row">
+                        <input type="hidden" name="attr_limit-show-direct-hit" class="show-checkbox" value="1" />
+                        <div class="ability-row-full">
+                            <span>Direct Hit:</span>
+                            <span name="attr_limit-direct-hit"></span>
+                        </div>
+                    </div>
+                    <div class="ability-row-full">
+                        <input type="hidden" name="attr_limit-show-limitation" class="show-checkbox" value="1" />
+                        <div class="ability-row-full">
+                            <span>Limitation:</span>
+                            <span name="attr_limit-limitation"></span>
+                        </div>
+                    </div>
+                </div>
+            </button>
+        </div>
+        <div class="primary-abilities-wrapper">
+            <div class="primary-abilities-header abilities-header">
+                <span>Primary Abilities</span>
+            </div>
+            <fieldset class="repeating_primary-abilities">
+                <div class="primary-buttons-wrapper">
+                    <button class="primary-action-button" type="action" name="act_roll">
+                        <div class="ability-title">
+                            <span class="ability-name" name="attr_name"></span>
+                            <span class="ability-tags" name="attr_tags"></span>
+                        </div>
+                        <div class="ability-check-section">
+                            <input type="hidden" name="attr_show-cost" class="show-cost-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Cost:</span>
+                                <span name="attr_cost"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-trigger" class="show-trigger-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Trigger:</span>
+                                <span name="attr_trigger"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-target" class="show-target-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Target:</span>
+                                <span name="attr_target"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-range" class="show-range-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Range:</span>
+                                <span name="attr_range"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-check" class="show-check-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Check:</span>
+                                <span name="attr_check"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-cr" class="show-cr-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>CR:</span>
+                                <span name="attr_cr"></span>
+                            </div>
+                        </div>
+                        <div class="abilities-effect-section">
+                            <div class="ability-row">
+                                <input type="hidden" name="attr_show-base-effect" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Base Effect:</span>
+                                    <span name="attr_base-effect"></span>
+                                </div>
+                            </div>
+                            <div class="ability-row">
+                                <input type="hidden" name="attr_show-direct-hit" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Direct Hit:</span>
+                                    <span name="attr_direct-hit"></span>
+                                </div>
+                            </div>
+                            <div class="ability-row-full">
+                                <input type="hidden" name="attr_show-limitation" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Limitation:</span>
+                                    <span name="attr_limitation"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                    <input type="hidden" name="attr_combo-one" class="combo-onecheckbox" value="0" />
+                    <div class="combos-wrapper">
+                        <button class="primary-action-button combo-button" type="action" name="act_combo-one">
+                            <div class="ability-title">
+                                <span class="ability-name" name="attr_combo-onename"></span>
+                                <span class="ability-tags" name="attr_combo-onetags"></span>
+                            </div>
+                            <div class="ability-check-section">
+                                <input type="hidden" name="attr_combo-oneshow-cost" class="show-cost-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>Cost:</span>
+                                    <span name="attr_combo-onecost"></span>
+                                </div>
+                                <input type="hidden" name="attr_combo-oneshow-trigger" class="show-trigger-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>Trigger:</span>
+                                    <span name="attr_combo-onetrigger"></span>
+                                </div>
+                                <input type="hidden" name="attr_combo-oneshow-target" class="show-target-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>Target:</span>
+                                    <span name="attr_combo-onetarget"></span>
+                                </div>
+                                <input type="hidden" name="attr_combo-oneshow-range" class="show-range-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>Range:</span>
+                                    <span name="attr_combo-onerange"></span>
+                                </div>
+                                <input type="hidden" name="attr_combo-oneshow-check" class="show-check-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>Check:</span>
+                                    <span name="attr_combo-onecheck"></span>
+                                </div>
+                                <input type="hidden" name="attr_combo-oneshow-cr" class="show-cr-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>CR:</span>
+                                    <span name="attr_combo-onecr"></span>
+                                </div>
+                            </div>
+                            <div class="abilities-effect-section">
+                                <div class="ability-row">
+                                    <input type="hidden" name="attr_combo-oneshow-base-effect" class="show-checkbox" value="1" />
+                                    <div class="ability-row-full">
+                                        <span>Base Effect:</span>
+                                        <span name="attr_combo-onebase-effect"></span>
+                                    </div>
+                                </div>
+                                <div class="ability-row">
+                                    <input type="hidden" name="attr_combo-oneshow-direct-hit" class="show-checkbox" value="1" />
+                                    <div class="ability-row-full">
+                                        <span>Direct Hit:</span>
+                                        <span name="attr_combo-onedirect-hit"></span>
+                                    </div>
+                                </div>
+                                <div class="ability-row-full">
+                                    <input type="hidden" name="attr_combo-oneshow-limitation" class="show-checkbox" value="1" />
+                                    <div class="ability-row-full">
+                                        <span>Limitation:</span>
+                                        <span name="attr_combo-onelimitation"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <input type="hidden" name="attr_combo-two" class="combo-twocheckbox" value="0" />
+                        <button class="primary-action-button combo-button" type="action" name="act_combo-two">
+                            <div class="ability-title">
+                                <span class="ability-name" name="attr_combo-twoname"></span>
+                                <span class="ability-tags" name="attr_combo-twotags"></span>
+                            </div>
+                            <div class="ability-check-section">
+                                <input type="hidden" name="attr_combo-twoshow-cost" class="show-cost-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>Cost:</span>
+                                    <span name="attr_combo-twocost"></span>
+                                </div>
+                                <input type="hidden" name="attr_combo-twoshow-trigger" class="show-trigger-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>Trigger:</span>
+                                    <span name="attr_combo-twotrigger"></span>
+                                </div>
+                                <input type="hidden" name="attr_combo-twoshow-target" class="show-target-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>Target:</span>
+                                    <span name="attr_combo-twotarget"></span>
+                                </div>
+                                <input type="hidden" name="attr_combo-twoshow-range" class="show-range-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>Range:</span>
+                                    <span name="attr_combo-tworange"></span>
+                                </div>
+                                <input type="hidden" name="attr_combo-twoshow-check" class="show-check-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>Check:</span>
+                                    <span name="attr_combo-twocheck"></span>
+                                </div>
+                                <input type="hidden" name="attr_combo-twoshow-cr" class="show-cr-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>CR:</span>
+                                    <span name="attr_combo-twocr"></span>
+                                </div>
+                            </div>
+                            <div class="abilities-effect-section">
+                                <div class="ability-row">
+                                    <input type="hidden" name="attr_combo-twoshow-base-effect" class="show-checkbox" value="1" />
+                                    <div class="ability-row-full">
+                                        <span>Base Effect:</span>
+                                        <span name="attr_combo-twobase-effect"></span>
+                                    </div>
+                                </div>
+                                <div class="ability-row">
+                                    <input type="hidden" name="attr_combo-twoshow-direct-hit" class="show-checkbox" value="1" />
+                                    <div class="ability-row-full">
+                                        <span>Direct Hit:</span>
+                                        <span name="attr_combo-twodirect-hit"></span>
+                                    </div>
+                                </div>
+                                <div class="ability-row-full">
+                                    <input type="hidden" name="attr_combo-twoshow-limitation" class="show-checkbox" value="1" />
+                                    <div class="ability-row-full">
+                                        <span>Limitation:</span>
+                                        <span name="attr_combo-twolimitation"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="secondary-abilities-wrapper">
+            <div class="secondary-abilities-header abilities-header">
+                <span>Secondary Abilities</span>
+            </div>
+            <fieldset class="repeating_secondary-abilities">
+                <div class="secondary-buttons-wrapper">
+                    <button class="primary-action-button" type="action" name="act_roll">
+                        <div class="ability-title">
+                            <span class="ability-name" name="attr_name"></span>
+                            <span class="ability-tags" name="attr_tags"></span>
+                        </div>
+                        <div class="ability-check-section">
+                            <input type="hidden" name="attr_show-cost" class="show-cost-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Cost:</span>
+                                <span name="attr_cost"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-trigger" class="show-trigger-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Trigger:</span>
+                                <span name="attr_trigger"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-target" class="show-target-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Target:</span>
+                                <span name="attr_target"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-range" class="show-range-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Range:</span>
+                                <span name="attr_range"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-check" class="show-check-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Check:</span>
+                                <span name="attr_check"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-cr" class="show-cr-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>CR:</span>
+                                <span name="attr_cr"></span>
+                            </div>
+                        </div>
+                        <div class="abilities-effect-section">
+                            <div class="ability-row">
+                                <input type="hidden" name="attr_show-base-effect" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Base Effect:</span>
+                                    <span name="attr_base-effect"></span>
+                                </div>
+                            </div>
+                            <div class="ability-row">
+                                <input type="hidden" name="attr_show-direct-hit" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Direct Hit:</span>
+                                    <span name="attr_direct-hit"></span>
+                                </div>
+                            </div>
+                            <div class="ability-row-full">
+                                <input type="hidden" name="attr_show-limitation" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Limitation:</span>
+                                    <span name="attr_limitation"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </fieldset>
+        </div>
+        <div class="instant-abilites-wrapper">
+            <div class="instant-abilities-header abilities-header">
+                <span>Instant Abilities</span>
+            </div>
+            <fieldset class="repeating_instant-abilities">
+                <div class="instant-buttons-wrapper">
+                    <button class="primary-action-button" type="action" name="act_roll">
+                        <div class="ability-title">
+                            <span class="ability-name" name="attr_name"></span>
+                            <span class="ability-tags" name="attr_tags"></span>
+                        </div>
+                        <div class="ability-check-section">
+                            <input type="hidden" name="attr_show-cost" class="show-cost-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Cost:</span>
+                                <span name="attr_cost"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-trigger" class="show-trigger-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Trigger:</span>
+                                <span name="attr_trigger"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-target" class="show-target-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Target:</span>
+                                <span name="attr_target"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-range" class="show-range-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Range:</span>
+                                <span name="attr_range"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-check" class="show-check-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Check:</span>
+                                <span name="attr_check"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-cr" class="show-cr-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>CR:</span>
+                                <span name="attr_cr"></span>
+                            </div>
+                        </div>
+                        <div class="abilities-effect-section">
+                            <div class="ability-row">
+                                <input type="hidden" name="attr_show-base-effect" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Base Effect:</span>
+                                    <span name="attr_base-effect"></span>
+                                </div>
+                            </div>
+                            <div class="ability-row">
+                                <input type="hidden" name="attr_show-direct-hit" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Direct Hit:</span>
+                                    <span name="attr_direct-hit"></span>
+                                </div>
+                            </div>
+                            <div class="ability-row-full">
+                                <input type="hidden" name="attr_show-limitation" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Limitation:</span>
+                                    <span name="attr_limitation"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </fieldset>
+        </div>
+        <div></div>
+    </div>
+</div>
+<rolltemplate class="sheet-rolltemplate-effect">
+    <div class="sheet-template-title">
+        {{title}}
+    </div>
+    {{#desc}}
+    <div class="sheet-template-row">
+        <span class="sheet-template-desc">
+            {{desc}}
+        </span>
+    </div>
+    {{/desc}}
+</rolltemplate>
+<rolltemplate class="sheet-rolltemplate-primary-ability">
+    <div class="sheet-template-title">
+        <span class="sheet-template-name">{{name}}</span>
+        <span class="sheet-template-tags">{{tags}}</span>
+    </div>
+    <div class="sheet-template-check-section">
+        {{#cost}}
+        <div class="sheet-template-display-section">
+            <span>Cost:</span>
+            <span>{{cost}}</span>
+        </div>
+        {{/cost}} {{#trigger}}
+        <div class="sheet-template-display-section">
+            <span>Trigger:</span>
+            <span>{{trigger}}</span>
+        </div>
+        {{/trigger}} {{#target}}
+        <div class="sheet-template-display-section">
+            <span>Target:</span>
+            <span>{{target}}</span>
+        </div>
+        {{/target}} {{#range}}
+        <div class="sheet-template-display-section">
+            <span>Range:</span>
+            <span>{{range}}</span>
+        </div>
+        {{/range}} {{#check}}
+        <div class="sheet-template-display-section">
+            <span>Check:</span>
+            <span>{{check}}</span>
+        </div>
+        {{/check}} {{#cr}}
+        <div class="sheet-template-display-section">
+            <span>CR:</span>
+            <span>{{cr}}</span>
+        </div>
+        {{/cr}}
+    </div>
+    <div class="sheet-template-effect-section">
+        {{#baseEffectDesc}}
+        <div class="sheet-template-row">
+            <div class="sheet-grid-full">
+                <span class="sheet-template-label">Base Effect:</span>
+                <span class="sheet-template-text">{{baseEffectDesc}}</span>
+            </div>
+        </div>
+        {{/baseEffectDesc}} {{#baseEffectDamage}}
+        <div class="sheet-template-row">
+            <div class="sheet-grid-full">
+                <span class="sheet-template-label">Damage:</span>
+                <span>{{baseEffectDamage}}</span>
+            </div>
+        </div>
+        {{/baseEffectDamage}} {{#directHitDesc}}
+        <div class="sheet-template-row">
+            <div class="sheet-grid-full">
+                <span class="sheet-template-label">Direct Hit:</span>
+                <span class="sheet-template-text">{{directHitDesc}}</span>
+            </div>
+        </div>
+        {{/directHitDesc}} {{#checkRoll}}
+        <div class="sheet-template-row">
+            <div class="sheet-grid-full">
+                <span class="sheet-template-label">Damage:</span>
+                {{#rollWasCrit() checkRoll}}
+                <span class="sheet-template-text">Crit:&nbsp;{{critHitDamage}}</span>
+                {{/rollWasCrit() checkRoll}} {{#^rollWasCrit() checkRoll}}
+                <span>{{directHitDamage}}</span>
+                {{/^rollWasCrit() checkRoll}}
+            </div>
+        </div>
+        {{/checkRoll}} {{#limitation}}
+        <div class="sheet-template-row">
+            <div class="sheet-grid-full">
+                <span class="sheet-template-label">Limitation:</span>
+                <span class="sheet-template-text">{{limitation}}</span>
+            </div>
+        </div>
+        {{/limitation}} {{#comboOptionOneName}}
+        <div>
+            Combo Actions: [{{comboOptionOneName}}]({{comboOneAct}}) {{#comboOptionTwoName}} [{{comboOptionTwoName}}]({{comboTwoAct}}) {{/comboOptionTwoName}}
+        </div>
+        {{/comboOptionOneName}}
+    </div>
+</rolltemplate>
+<script type="text/worker">
+    const effects = [{"name":"Combo","job":["drg","war"],"value":"combo","levels":{"30":{"counters":"1","baseEffect":{"desc":"After resolving the effects of an ability with Combo, you may use one of the specified abilities at any point during your turn. You may move before doing so, and may choose a new target when using this additional ability."}}},"tags":["Trait"]},{"name":"Consecutive Invocation","job":["blm"],"value":"consecutiveInvocation","levels":{"30":{"baseEffect":{"desc":"On your turn, after resolving the effects of an ability that enables this trait, you may forgo all standard movement until the end of your turn to use an additional invoked primary ability. You may choose a new target when using this additional ability. Consecutive Invocation can only be used once per turn and does not prevent you from using focus to perform an additonal secondary action."}}},"tags":["Trait"]},{"name":"Umbral Ice","job":["blm"],"value":"umbralIce","levels":{"30":{"counters":"1","baseEffect":{"desc":"While under the effect of Umbral Ice, recover an additional 2 MP at the end of the [Adventurer Step]. Umbral Ice is removed when you are Knocked Out, or, if the effect is not renewed at the end of your next turn. Being granted Astral Fire removes this effect as well"}}},"tags":["Enhancement"]},{"name":"Astral Fire","job":["blm"],"value":"astralFire","levels":{"30":{"counters":"1","baseEffect":{"desc":"While under the effect of Astral Fire, your fire-aspected abilites deal an additonal 1d6 damage and you do not recover MP at the end of the [Adventurer Step]. Astral Fire is removed when you are Knocked Out, or if the effect is not renewed, at the end of your next turn. Being granted Umbral Ice removes this effect as well."}}},"tags":["Enhancement"]},{"50":{"baseEffect":{"desc":"You cannot use a thunder spell ability such as Thunder III or Thunder II to inflict a DOT on a charachter already suffering from a DOT inflicted by one of your thunder spell abilities."}},"name":"Thaumaturgic Shock","job":["blm"],"value":"thaumaturgicShock","levels":{"30":{"counters":"1","baseEffect":{"desc":"You cannot use a thunder spell ability such as Thunder or Thunder II to inflict a DOT on a charachter already suffering from a DOT inflicted by one of your thunder spell abilities."}}},"tags":["Trait"]},{"name":"Umbral Mastery","job":["blm"],"value":"umbralMastery","levels":{"40":{"counters":"1","baseEffect":{"desc":"Certian abilities grant you Umbral Hears. Up to 1 Umbral Heart can be accumulated at any given time, and you can never have less than 0. When you use a fire-aspected ability, you may spend an Umbral Heart to reduce its MP cost by 1, to a minimum of 1."}}},"tags":["Trait"]},{"name":"Power Surge","job":["drg"],"value":"powerSurge","levels":{"30":{"counters":"1","baseEffect":{"desc":"while under the effect of Power Surge, your abilities deal an additional 2 damage. Power Surge is removed when you are Knocked Out"}},"50":{"counters":"1","baseEffect":{"desc":"while under the effect of Power Surge, your abilities deal an additional 3 damage. Power Surge is removed when you are Knocked Out"}}},"tags":["Enhancement"]},{"name":"Drain","job":["drg"],"value":"drain","levels":{"30":{"counters":"1","baseEffect":{"desc":"While under the effect of Drain your abilities restore 2 HP for each enemy they damage."}},"50":{"counters":"1","baseEffect":{"desc":"While under the effect of Drain your abilities restore 3 HP for each enemy they damage."}}},"tags":["Enhancement"]},{"name":"Transcendent","job":["whm"],"value":"transcenedent","levels":{"30":{"baseEffect":{"desc":"While a character is under the effect of Transcendent, they are immune to damage and enfeeblements inflicted by enemy abilities, traits, and encounter mechanics. Transcendent is removed at the start of the character's turn or when the character uses an ability."}}},"tags":["Enhancement"]},{"name":"Revivify (X)","job":["whm"],"value":"revivify","levels":{"40":{"baseEffect":{"desc":"Allies granted Revivify (X) recover X HP at the end of the [Adventurer Step]. Revivify cannot stack, and only the highest Revivify is resolved each round. Should multiple effects need to be resolved simultaniously, the adventurers may decide the order in which to do so."}}},"tags":["Enhancement"]},{"name":"Weakness","job":["whm"],"value":"weakness","levels":{"30":{"baseEffect":{"desc":"A weakened character incurs a -2 penalty on all checks. The Weakened enfeeblement does not wear off at the end of a phase, and can only be removed by completing a rest action or by effects which specifically remove it."}}},"tags":["Enfeeblement"]},{"name":"Enmity","job":["war"],"value":"enmity","levels":{"30":{"baseEffect":{"desc":"Enemies that you have Enmity on incur a -5 penalty on all ability checks that do not target you. Enmity is removed at the end of the phase, at the end of the enemy's next turn or when you are Knocked Out."}}},"tags":["Enfeeblement"]},{"name":"The Beast Within ","job":["war"],"value":"thebeastwithin","levels":{"40":{"counters":4,"baseEffect":{"desc":"Cerian abilities grant you Wrath, and other abilities consume it. You cannot use an ability if you lack the Wrath to pay its cost. Up to 4 Wrath cna be accumulated at any given time, and you can never have less than 0."}}},"tags":["Trait"]},{"name":"Surging Tempest","job":["war"],"value":"surgingTempest","levels":{"40":{"baseEffect":{"desc":"While under the effect of Surgiung Tempest, treat any roll of a 1 when determining damage as if it were a 2 Surging Tempest is removed when you are knocked out."}}},"tags":["Enhancement"]}]
+    const primaryAbilities = [{"name":"Jump","job":"drg","levels":{"30":{"target":"Single","range":"5","check":"STR","cr":"Defense","baseEffect":{"damage":"2d6+3","dice":2,"flat":3,"desc":"Deals 2d6+3 damage to the target."},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."},"limitation":"Once per phase"},"50":{"target":"Single","range":"5","check":"STR","cr":"Defense","baseEffect":{"damage":"3d6+5","dice":3,"flat":5,"desc":"Deals 3d6+5 damage to the target."},"directHit":{"damage":"3d6","dice":3,"desc":"Deals an additional 3d6 damage."},"limitation":"Once per phase"}},"value":"drgJump","tags":["Primary","Physical"]},{"name":"True Thrust","job":"drg","levels":{"30":{"target":"Single","range":"1","check":"STR","cr":"Defense","baseEffect":{"damage":3,"flat":3,"desc":"Deals 3 damage to the target."},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."},"combo":{"dragoonCombo":{"name":"Dragoon Combo (Vorpal Thrust + Full Thrust)","levels":{"30":{"target":"Single","range":"1","check":"STR","cr":"Defense","baseEffect":{"damage":"3","flat":3,"desc":"Deals 3 damage to the target."},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."}},"50":{"target":"Single","range":"1","check":"STR","cr":"Defense","baseEffect":{"damage":"5","flat":5,"desc":"Deals 5 damage to the target."},"directHit":{"damage":"3d6","dice":2,"desc":"Deals an additional 3d6 damage."}}},"tags":["Primary","Physical"]},"disembowel":{"name":"Disembowel","levels":{"30":{"target":"Single","range":"1","check":"STR","cr":"Defense","baseEffect":{"damage":"3","flat":3,"desc":"Deals 3 damage to the target and grants Power Surge."},"directHit":{"damage":"1d6","dice":1,"desc":"Deals an additional 1d6 damage."}},"50":{"target":"Single","range":"1","check":"STR","cr":"Defense","baseEffect":{"damage":"5","flat":5,"desc":"Deals 5 damage to the target and inflicts a DOT (3) on the target. Grants Power Surge"},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."}}},"tags":["Primary","Physical"]}}},"50":{"target":"Single","range":"1","check":"STR","cr":"Defense","baseEffect":{"damage":"5","flat":5,"desc":"Deals 5 damage to the target."},"directHit":{"damage":"3d6","dice":2,"desc":"Deals an additional 3d6 damage."},"combo":{"dragoonCombo":{"name":"Dragoon Combo (Vorpal Thrust + Full Thrust)","levels":{"30":{"target":"Single","range":"1","check":"STR","cr":"Defense","baseEffect":{"damage":"3","flat":3,"desc":"Deals 3 damage to the target."},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."}},"50":{"target":"Single","range":"1","check":"STR","cr":"Defense","baseEffect":{"damage":"5","flat":5,"desc":"Deals 5 damage to the target."},"directHit":{"damage":"3d6","dice":2,"desc":"Deals an additional 3d6 damage."}}},"tags":["Primary","Physical"]},"disembowel":{"name":"Disembowel","levels":{"30":{"target":"Single","range":"1","check":"STR","cr":"Defense","baseEffect":{"damage":"3","flat":3,"desc":"Deals 3 damage to the target and grants Power Surge."},"directHit":{"damage":"1d6","dice":1,"desc":"Deals an additional 1d6 damage."}},"50":{"target":"Single","range":"1","check":"STR","cr":"Defense","baseEffect":{"damage":"5","flat":5,"desc":"Deals 5 damage to the target and inflicts a DOT (3) on the target. Grants Power Surge"},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."}}},"tags":["Primary","Physical"]}}}},"value":"trueThrust","tags":["Primary","Physical"]},{"name":"Piercing Talon","job":"drg","levels":{"30":{"target":"Single","range":"5","check":"STR","cr":"Defense","baseEffect":{"damage":"3","flat":3,"desc":"Deals 3 damage to the target."},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."}},"50":{"target":"Single","range":"5","check":"STR","cr":"Defense","baseEffect":{"damage":"5","flat":5,"desc":"Deals 5 damage to the target."},"directHit":{"damage":"3d6","dice":3,"desc":"Deals an additional 3d6 damage."}}},"value":"peircingTalon","tags":["Primary","Physical"]},{"name":"Doom Spike","job":"drg","levels":{"40":{"target":"All Enemies Within Range","range":"A 3x3 area adjacent to this character","check":"STR","cr":"Defense","baseEffect":{"damage":"3","flat":3,"desc":"Deals 3 damage to all targets."},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."}},"50":{"target":"All Enemies Within Range","range":"A 3x3 area adjacent to this character","check":"STR","cr":"Defense","baseEffect":{"damage":"5","flat":5,"desc":"Deals 5 damage to all targets."},"directHit":{"damage":"3d6","dice":3,"desc":"Deals an additional 3d6 damage."}}},"value":"doomSpike","tags":["Primary","Physical"]},{"name":"Spineshatter Dive","job":"drg","levels":{"50":{"target":"Single","range":"5","check":"STR","cr":"Defense","baseEffect":{"damage":"2d6+5","flat":5,"dice":2,"desc":"Deals 2d6+5 damage to the target, then move to an empty square adjacent to the target if one is available."},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."},"limitation":"Once per phase"}},"value":"spineshatterDive","tags":["Primary","Physical"]},{"name":"Dragonfire Dive","job":"drg","levels":{"50":{"target":"All Enemies Within Range","range":"3x3 area within 5 squares of this character","check":"STR","cr":"Defense","baseEffect":{"damage":"2d6+5","flat":5,"dice":2,"desc":"Deals 2d6+5 damage to all targets, then move to an empty square within range if one is available."},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."},"limitation":"Once per phase"}},"value":"dragonfireDive","tags":["Primary","Physical","Fire-Aspected"]},{"name":"Warrior Combo (Heavy Swing + Maim)","job":"war","levels":{"30":{"target":"Single","range":"1 square","check":"STR","cr":"Defense","baseEffect":{"damage":2,"flat":2,"desc":"Deals 2 damage and inflicts Enmity on the Target."},"directHit":{"damage":"1d6","dice":1,"desc":"Deals an additional 1d6 damage."},"combo":{"stormsPath":{"name":"Storm's Path","levels":{"30":{"target":"Single","range":"1","check":"STR","cr":"Defense","baseEffect":{"damage":"2","flat":2,"desc":"Deals 2 damage and inflicts Enmity on the Target. Restores 2 HP"},"directHit":{"damage":"1d6","dice":1,"desc":"Deals an additional 1d6 damage."}}},"tags":["Primary","Physical"]}}},"40":{"target":"Single","range":"1 square","check":"STR","cr":"Defense","baseEffect":{"damage":2,"flat":2,"desc":"Deals 2 damage and inflicts Enmity on the Target."},"directHit":{"damage":"1d6","dice":1,"desc":"Deals an additional 1d6 damage."},"combo":{"stormsPath":{"name":"Storm's Path","levels":{"40":{"target":"Single","range":"1","check":"STR","cr":"Defense","baseEffect":{"damage":"2","flat":2,"desc":"Deals 2 damage and inflicts Enmity on the Target. Restores 2 HP and grants 1 Wrath"},"directHit":{"damage":"1d6","dice":1,"desc":"Deals an additional 1d6 damage."}}},"tags":["Primary","Physical"]}}},"50":{"target":"Single","range":"1","check":"STR","cr":"Defense","baseEffect":{"damage":"3","flat":3,"desc":"Deals 3 damage to the target and inflicts Enmity on the target. Grants 1 Wrath."},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."},"combo":{"stormsPath":{"name":"Storm's Path","levels":{"50":{"target":"Single","range":"1","check":"STR","cr":"Defense","baseEffect":{"damage":"3","flat":3,"desc":"Deals 3 damage and inflicts Enmity on the Target. Restores 3 HP and grants 1 Wrath"},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."}}},"tags":["Primary","Physical"]},"stormsEye":{"name":"Storm's Eye","levels":{"50":{"target":"Single","range":"1","check":"STR","cr":"Defense","baseEffect":{"damage":"3","flat":3,"desc":"Deals 3 damage and inflicts Enmity on all targets. Grants 1 Wrath and Surging Tempest."},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."}}},"tags":["Primary","Physical"]}}}},"value":"warCombo","tags":["Primary","Physical"]},{"name":"Overpower","job":"war","levels":{"30":{"target":"All Enemies Within Range","range":"A 5x5 area centered on this character","check":"STR","cr":"Defense","baseEffect":{"desc":"Inflicts Enmity on all targets"},"directHit":{"damage":"2","flat":2,"desc":"Deals 2 Damage to all targets."}},"40":{"upgradeName":"Overpower + Mythril Tempest","target":"All Enemies Within Range","range":"A 5x5 area centered on this character","check":"STR","cr":"Defense","baseEffect":{"flat":2,"desc":"Deals 2 damage and inflicts Enmity on all targets"},"directHit":{"damage":"1d6","dice":1,"desc":"Deals 1d6 Damage to all targets."}},"50":{"upgradeName":"Overpower + Mythril Tempest","target":"All Enemies Within Range","range":"A 5x5 area centered on this character","check":"STR","cr":"Defense","baseEffect":{"flat":3,"desc":"Deals 3 damage and inflicts Enmity on all targets"},"directHit":{"damage":"2d6","dice":2,"desc":"Deals 2d6 Damage to all targets."}}},"value":"overpower","tags":["Primary","Physical"]},{"name":"Tomahawk","job":"war","levels":{"30":{"target":"Single","range":"5 squares","check":"STR","cr":"Defense","baseEffect":{"flat":2,"desc":"Deals 2 damage and inflicts Enmity on the Target"},"directHit":{"damage":"1d6","dice":1,"desc":"Deals an additional 1d6 damage."}},"50":{"target":"Single","range":"5 squares","check":"STR","cr":"Defense","baseEffect":{"flat":3,"desc":"Deals 3 damage and inflicts Enmity on the Target"},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."}}},"value":"tomahawk","tags":["Primary","Physical"]},{"name":"Inner Beast","job":"war","levels":{"40":{"cost":"2 Wrath","target":"Single","range":"1 square","check":"STR","cr":"Defense","baseEffect":{"flat":3,"dice":2,"desc":"Deals 2d6+3 damage and inflicts Enmity on the Target"},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."}},"50":{"cost":"2 Wrath","target":"Single","range":"1 square","check":"STR","cr":"Defense","baseEffect":{"flat":5,"dice":3,"desc":"Deals 3d6+5 damage and inflicts Enmity on the Target"},"directHit":{"damage":"3d6","dice":3,"desc":"Deals an additional 3d6 damage."}}},"value":"innerBeast","tags":["Primary","Physical"]},{"name":"Steel Cyclone","job":"war","levels":{"50":{"cost":"2 Wrath","target":"All Enemies Within Range","range":"A 5x5 area centered on this character","check":"STR","cr":"Defense","baseEffect":{"flat":3,"dice":2,"desc":"Deals 2d6+3 damage and inflicts Enmity on all targets."},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."}}},"value":"steelCyclone","tags":["Primary","Physical"]},{"name":"Stone II","job":"whm","levels":{"30":{"cost":"1 MP","target":"Single","range":"10 squares","check":"MND","cr":"Magic Defense","baseEffect":{"flat":2,"desc":"Deals 2 damage to the target."},"directHit":{"damage":"1d6","dice":1,"desc":"Deals an additional 1d6 damage."}},"50":{"cost":"1 MP","target":"Single","range":"10 squares","check":"MND","cr":"Magic Defense","baseEffect":{"flat":3,"desc":"Deals 3 damage to the target."},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."}}},"value":"stoneII","tags":["Primary","Magic","Earth-Aspected","Invoked"]},{"name":"Holy","job":"whm","levels":{"50":{"cost":"2 MP","target":"All Enemies Within Range","range":"A 5x5 area centered on this character","check":"MND","cr":"Magic Defense","baseEffect":{"flat":5,"desc":"Deals 5 damage and Stuns all targets until the end of this turn. Any characters Stunned by this ability cannot be Stunned again during this encounter."},"directHit":{"damage":"1d6","dice":1,"desc":"Deals an additional 1d6 damage."}}},"value":"holy","tags":["Primary","Magic","Invoked"]},{"name":"Cure II","job":"whm","levels":{"30":{"cost":"2 MP","target":"Single","range":"10 squares","check":"Special","baseEffect":{"flat":7,"dice":2,"desc":"Restores 2d6+7 HP to the target."}},"50":{"cost":"2 MP","target":"Single","range":"10 squares","check":"Special","baseEffect":{"flat":11,"dice":3,"desc":"Restores 3d6+11 HP to the target."}}},"value":"cureII","tags":["Primary","Magic","Invoked"]},{"name":"Medica","job":"whm","levels":{"30":{"cost":"2 MP","target":"All allies within range","range":"A 5x5 area centered on this character","check":"Special","baseEffect":{"flat":3,"dice":1,"desc":"Restores 1d6+3 HP to all targets."}},"50":{"cost":"2 MP","target":"All allies within range","range":"A 5x5 area centered on this character","check":"Special","baseEffect":{"flat":5,"dice":2,"desc":"Restores 2d6+5 HP to all targets."}}},"value":"Medica","tags":["Primary","Magic","Invoked"]},{"name":"Repose","job":"whm","levels":{"30":{"cost":"2 MP","target":"Single","range":"10 squares","check":"MND","cr":"Magic Defense","baseEffect":{"desc":"The target incurs a -2 Penalty on all checks. This effect lasts until the target takes damage or the phase ends."},"directHit":{"desc":"Remove all markers generated by the target."}},"50":{"cost":"2 MP","target":"Single","range":"10 squares","check":"MND","cr":"Magic Defense","baseEffect":{"desc":"The target incurs a -3 Penalty on all checks. This effect lasts until the target takes damage or the phase ends."},"directHit":{"desc":"Remove all markers generated by the target."}}},"value":"repose","tags":["Primary","Magic","Invoked"]},{"name":"Raise","job":"whm","levels":{"30":{"cost":"3 MP","target":"1 Knocked Out character","range":"5 squares*","check":"Special","baseEffect":{"flat":3,"dice":1,"desc":"Removes the Knocked Out Enfeeblement form the target, then restores 1d6+3 HP, grants Transcendent and afflicts them with Weakness. *this ability can also target a character outside the encounter map. When doing so, move the character to an empty square within range after resolving the ability's effects."}},"50":{"cost":"3 MP","target":"1 Knocked Out character","range":"5 squares*","check":"Special","baseEffect":{"flat":5,"dice":2,"desc":"Removes the Knocked Out Enfeeblement form the target, then restores 2d6+5 HP, grants Transcendent and afflicts them with Weakness. *this ability can also target a character outside the encounter map. When doing so, move the character to an empty square within range after resolving the ability's effects."}}},"value":"raise","tags":["Primary","Magic","Invoked"]},{"name":"Cure III","job":"whm","levels":{"40":{"cost":"3 MP","target":"All allies within range","range":"A 5x5 area centered on an ally within 10 squares of this character","check":"Special","baseEffect":{"flat":3,"dice":2,"desc":"Restores 2d6+3 HP to all targets."}},"50":{"cost":"3 MP","target":"All allies within range","range":"A 5x5 area centered on an ally within 10 squares of this character","check":"Special","baseEffect":{"flat":5,"dice":3,"desc":"Restores 3d6+5 HP to all targets."}}},"value":"cureIII","tags":["Primary","Magic","Invoked"]},{"name":"Medica II","job":"whm","levels":{"50":{"cost":"2 MP","target":"All allies within range","range":"A 5x5 area centered on this character","check":"Special","baseEffect":{"flat":3,"dice":1,"desc":"Restores 1d6+3 HP and grants Revivify(3) to all targets."}}},"value":"medicaII","tags":["Primary","Magic","Invoked"]},{"name":"Benediction","job":"whm","levels":{"50":{"cost":"1 MP","target":"Single","range":"10 squares","baseEffect":{"desc":"Fully Restores the target's HP."},"limitation":"Once per phase"}},"value":"benediction","tags":["Primary","Magic"]},{"name":"Blizzard","job":"blm","levels":{"30":{"cost":"1 MP","target":"Single","range":"10 squares","check":"INT","cr":"Magic Defense","baseEffect":{"flat":3,"desc":"Deals 3 damage to the target, grants Umbral Ice and enables Consecutive Invocation."},"directHit":{"damage":"1d6","dice":1,"desc":"Deals an additional 1d6 damage."}},"50":{"cost":"1 MP","target":"Single","range":"10 squares","check":"INT","cr":"Magic Defense","baseEffect":{"flat":5,"desc":"Deals 5 damage to the target, grants Umbral Ice and enables Consecutive Invocation."},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."}}},"value":"blizzard","tags":["Primary","Magic","Ice-Aspected","Invoked"]},{"name":"Blizzard II","job":"blm","levels":{"30":{"cost":"2 MP","target":"All Enemies Within Range","range":"A 5x5 area within 10 squares of this character","check":"INT","cr":"Magic Defense","baseEffect":{"flat":3,"desc":"Deals 3 damage to all targets and grans Umbral Ice."},"directHit":{"damage":"1d6","dice":1,"desc":"Deals an additional 1d6 damage."}},"50":{"cost":"2 MP","target":"All Enemies Within Range","range":"A 5x5 area within 10 squares of this character","check":"INT","cr":"Magic Defense","baseEffect":{"flat":5,"desc":"Deals 5 damage to all targets and grans Umbral Ice."},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."}}},"value":"blizzardII","tags":["Primary","Magic","Ice-Aspected","Invoked"]},{"name":"Blizzard III","job":"blm","levels":{"40":{"cost":"2 MP","target":"Single","range":"10 squares","check":"INT","cr":"Magic Defense","baseEffect":{"flat":5,"desc":"Deals 5 damage to the target and grants Umbral Ice."},"directHit":{"damage":"1d6","dice":1,"desc":"Deals an additional 1d6 damage."}},"50":{"cost":"2 MP","target":"Single","range":"10 squares","check":"INT","cr":"Magic Defense","baseEffect":{"flat":8,"desc":"Deals 8 damage to the target and grants Umbral Ice."},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."}}},"value":"blizzardIII","tags":["Primary","Magic","Ice-Aspected","Invoked"]},{"name":"Fire","job":"blm","levels":{"30":{"cost":"2 MP","target":"Single","range":"10 squares","check":"INT","cr":"Magic Defense","baseEffect":{"flat":3,"desc":"Deals 3 damage to the target, grants Astral Fire, and enables Consecutive Invocation."},"directHit":{"damage":"1d6","dice":1,"desc":"Deals an additional 1d6 damage."}},"40":{"cost":"2 MP","target":"Single","range":"10 squares","check":"INT","cr":"Magic Defense","baseEffect":{"flat":3,"desc":"Deals 3 damage to the target, grants Astral Fire, and enables Consecutive Invocation. If the die rolled for this ability check lands on a 15 or higher, the following proc effect triggers. Firestarter: the next Fire III  you use this phase costs 0 MP."},"directHit":{"damage":"1d6","dice":1,"desc":"Deals an additional 1d6 damage."}},"50":{"cost":"2 MP","target":"Single","range":"10 squares","check":"INT","cr":"Magic Defense","baseEffect":{"flat":5,"desc":"Deals 5 damage to the target, grants Astral Fire, and enables Consecutive Invocation. If the die rolled for this ability check lands on a 15 or higher, the following proc effect triggers. Firestarter: the next Fire III  you use this phase costs 0 MP."},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."}}},"value":"fire","tags":["Primary","Magic","Fire-Aspected","Invoked"]},{"name":"Fire II","job":"blm","levels":{"30":{"cost":"3 MP","target":"All Enemies Within Range","range":"A 5x5 area within 10 squares of this character","check":"INT","cr":"Magic Defense","baseEffect":{"flat":3,"desc":"Deals 3 damage to all targets and grants Astral Fire."},"directHit":{"damage":"1d6","dice":1,"desc":"Deals an additional 1d6 damage."}},"50":{"cost":"3 MP","target":"All Enemies Within Range","range":"A 5x5 area within 10 squares of this character","check":"INT","cr":"Magic Defense","baseEffect":{"flat":5,"desc":"Deals 5 damage to all targets and grants Astral Fire."},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."}}},"value":"fireII","tags":["Primary","Magic","Fire-Aspected","Invoked"]},{"name":"Fire III","job":"blm","levels":{"40":{"cost":"3 MP","target":"Single","range":"10 squares","check":"INT","cr":"Magic Defense","baseEffect":{"flat":5,"desc":"Deals 5 damage to the target and grants Astral Fire."},"directHit":{"damage":"1d6","dice":1,"desc":"Deals an additional 1d6 damage."}},"50":{"cost":"3 MP","target":"Single","range":"10 squares","check":"INT","cr":"Magic Defense","baseEffect":{"flat":8,"desc":"Deals 8 damage to the target and grants Astral Fire."},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."}}},"value":"fireIII","tags":["Primary","Magic","Fire-Aspected","Invoked"]},{"name":"Thunder","job":"blm","levels":{"30":{"cost":"1 MP","target":"Single","range":"10 squares","baseEffect":{"flat":3,"desc":"Deals 3 damage and inflicts a DOT(3) on the target. Enables Consecutive Invocation. Whenever the DOT(3)s inflicted by this ability deal damage, rolw a single d20. On a 19 or 20, the following proc effect triggers. Thundercloud: The next lightning-aspected ability you use this phase costs 0 MP and deals an additional 6 damage"}},"50":{"upgradeName":"Thunder III","cost":"1 MP","target":"Single","range":"10 squares","baseEffect":{"flat":5,"desc":"Deals 5 damage and inflicts a DOT(5) on the target. Enables Consecutive Invocation. Whenever the DOT(5)s inflicted by this ability deal damage, rolw a single d20. On a 19 or 20, the following proc effect triggers. Thundercloud: The next lightning-aspected ability you use this phase costs 0 MP and deals an additional 9 damage"}}},"value":"thunder","tags":["Primary","Magic","Lightning-Aspected","Invoked"]},{"name":"Thunder II","job":"blm","levels":{"30":{"cost":"2 MP","target":"All Enemies Within Range","range":"A 5x5 area within 10 squares of this character","baseEffect":{"desc":"Inflicts a DOT(3) on all targets. Whenever the DOT(3)s inflicted by this ability deal damage, roll a single d20. On a 19 or 20 the following proc effect triggers. Thundercloud: the next lightning-aspected ability you use this phase costs 0 MP and deals an additonal 6 damage."}},"50":{"cost":"2 MP","target":"All Enemies Within Range","range":"A 5x5 area within 10 squares of this character","baseEffect":{"desc":"Inflicts a DOT(5) on all targets. Whenever the DOT(5)s inflicted by this ability deal damage, roll a single d20. On a 19 or 20 the following proc effect triggers. Thundercloud: the next lightning-aspected ability you use this phase costs 0 MP and deals an additonal 9 damage."}}},"value":"thunderII","tags":["Primary","Magic","Lightning-Aspected","Invoked"]},{"name":"Sleep","job":"blm","levels":{"30":{"cost":"2 MP","target":"All Enemies Within Range","range":"A 5x5 area within 10 squares of this character","check":"INT","cr":"Magic Defense","baseEffect":{"desc":"All targets incur a -2 penalty on all checks. This effect lasts until the targets take damage or the phase ends."},"directHit":{"desc":"Remove all markers generated by all targets."}},"50":{"cost":"2 MP","target":"All Enemies Within Range","range":"A 5x5 area within 10 squares of this character","check":"INT","cr":"Magic Defense","baseEffect":{"desc":"All targets incur a -3 penalty on all checks. This effect lasts until the targets take damage or the phase ends."},"directHit":{"desc":"Remove all markers generated by all targets."}}},"value":"sleep","tags":["Primary","Magic","Invoked"]},{"name":"Freeze","job":"blm","levels":{"40":{"requirement":"Under the effect of Umbral Ice.","cost":"2 MP","target":"All Enemies Within Range","range":"A 5x5 area within 10 squares of this character","check":"INT","cr":"Magic Defense","baseEffect":{"flat":3,"desc":"Deals 3 damage to all targets and grants 1 Umbral Heart."},"directHit":{"damage":"1d6","dice":1,"desc":"Deals an additional 1d6 damage."}},"50":{"requirement":"Under the effect of Umbral Ice.","cost":"2 MP","target":"All Enemies Within Range","range":"A 5x5 area within 10 squares of this character","check":"INT","cr":"Magic Defense","baseEffect":{"flat":5,"desc":"Deals 5 damage to all targets and grants 1 Umbral Heart."},"directHit":{"damage":"2d6","dice":2,"desc":"Deals an additional 2d6 damage."}}},"value":"freeze","tags":["Primary","Magic","Ice-Aspected","Invoked"]},{"name":"Flare","job":"blm","levels":{"50":{"requirement":"Under the effect of Astral Fire, at least 1 MP remaining, and you have not used any abilities this turn.","cost":"ALL MP","target":"Single","range":"10 squares","check":"INT","cr":"Magic Defense","baseEffect":{"flat":5,"dice":3,"desc":"Deals 3d6+5 damage to all enemies within a 5x5 single square occupied by the target. Grants Astral Fire. Your turn ends immediately after resolving this abilities effects."},"directHit":{"damage":"3d6","dice":3,"desc":"Deals an additional 3d6 damage to the target."}}},"value":"flare","tags":["Primary","Magic","Fire-Aspected","Invoked"]}];
+    const secondaryAbilities = [{"name":"Life Surge","job":"drg","levels":{"30":{"baseEffect":{"desc":"Grants Drain until the end of this turn and one advantage die on your next ability check."},"limitation":"Once per phase"}},"value":"drgLifeSurge","tags":["Secondary"]},{"name":"Bloodbath","job":"drg","levels":{"30":{"baseEffect":{"desc":"Grants Drain until the end of this turn."},"limitation":"Once per phase"}},"value":"drgBloodbath","tags":["Secondary"]},{"name":"Elusive Jump","job":"drg","levels":{"40":{"check":"Special","baseEffect":{"desc":"Move up to 5 squares. Roll a d20 for the ability check; on a 1, the GM determines your final destination."},"limitation":"Twice per phase"}},"value":"drgElusiveJump","tags":["Secondary"]},{"name":"Leg Sweep","job":"drg","levels":{"30":{"target":"Single","range":"1","baseEffect":{"desc":"Stuns the target until the end of this turn. Any characters Stunned by this ability cannot be Stunned again during this encounter."},"limitation":"Once per phase"}},"value":"drgLegSweep","tags":["Secondary"]},{"name":"Lance Charge","job":"drg","levels":{"30":{"baseEffect":{"desc":"Your abilities deal an additional 2 damage until the end of this turn."},"limitation":"Twice per phase"},"50":{"baseEffect":{"desc":"Your abilities deal an additional 3 damage until the end of this turn."},"limitation":"Twice per phase"}},"value":"drgLanceCharge","tags":["Secondary"]},{"name":"Rampart","job":"war","levels":{"30":{"baseEffect":{"desc":"Reduces the damage you take from all abilities by 2 until the start of your next turn."},"limitation":"Once per phase"},"50":{"baseEffect":{"desc":"Reduces the damage you take from all abilities by 3 until the start of your next turn."},"limitation":"Once per phase"}},"value":"rampart","tags":["Secondary"]},{"name":"Low Blow","job":"war","levels":{"30":{"target":"Single","range":"1 square","baseEffect":{"desc":"Stuns the target until the end of this turn. Any characters Stunned by this ability cannot be Stunned again during this encounter."},"limitation":"Once per phase"}},"value":"lowblow","tags":["Secondary","Physical"]},{"name":"Berserk","job":"war","levels":{"30":{"baseEffect":{"desc":"Your abilities deal an additional 2 damage until the end of this turn."},"limitation":"Three times per phase"},"50":{"baseEffect":{"desc":"Your abilities deal an additional 3 damage until the end of this turn."},"limitation":"Three times per phase"}},"value":"berserk","tags":["Secondary"]},{"name":"Holmgang","job":"war","levels":{"50":{"baseEffect":{"desc":"The next time you take damage that would reduce you to 0 HP, you are instead reduced to 1 HP. THis effect is removed at the start of your next turn."},"limitation":"Once per phase"}},"value":"holmgang","tags":["Secondary"]},{"name":"Infuriate","job":"war","levels":{"50":{"baseEffect":{"desc":"Grants 2 Wrath."},"limitation":"Once per phase"}},"value":"infuriate","tags":["Secondary"]},{"name":"Aero","job":"whm","levels":{"30":{"cost":"1 MP","target":"Single","range":"10 squares","baseEffect":{"desc":"Inflicts a DOT(3) on the target"}},"50":{"cost":"1 MP","upgradeName":"Aero II","target":"Single","range":"10 squares","baseEffect":{"flat":3,"desc":"Deals 3 damage and inflicts a DOT(5) on the target"}}},"value":"aero","tags":["Secondary","Magic","Wind-Aspected"]},{"name":"Cure","job":"whm","levels":{"30":{"cost":"1 MP","target":"Single","range":"10 squares","check":"Special","baseEffect":{"dice":1,"flat":1,"desc":"Restores 1d6+1 HP to the target."}},"40":{"cost":"1 MP","target":"Single","range":"10 squares","check":"Special","baseEffect":{"dice":1,"flat":1,"desc":"Restores 1d6+1 HP to the target. Roll a d20 for the ability check; on an 18 or higher, the following proc effect triggers. Freecure: the next Cure II you se this phase costs 0 MP."}},"50":{"cost":"1 MP","target":"Single","range":"10 squares","check":"Special","baseEffect":{"dice":2,"flat":2,"desc":"Restores 2d6+2 HP to the target. Roll a d20 for the ability check; on an 18 or higher, the following proc effect triggers. Freecure: the next Cure II you se this phase costs 0 MP."}}},"value":"cure","tags":["Secondary","Magic","Invoked"]},{"name":"Esuna","job":"whm","levels":{"30":{"cost":"1 MP","target":"Single","range":"10 squares","baseEffect":{"desc":"Removes a single enfeeblement of your choosing from the target. Some enfeeblements such as Knocked Out or Weakness, cannot be removed by this effect"}}},"value":"esuna","tags":["Secondary","Magic","Invoked"]},{"name":"Lucid Dreaming","job":["blm","whm"],"levels":{"30":{"baseEffect":{"desc":"Recover an additional 1 MP at the end of this round's [Adventurer Step]. If no MP is recovered, this has no effect."},"limitation":"Once per phase"}},"value":"lucidDreaming","tags":["Secondary"]},{"name":"Regen","job":"whm","levels":{"40":{"cost":"1 MP","target":"Single","range":"10 squares","baseEffect":{"desc":"Grants the target Revivify(3)."}},"50":{"cost":"1 MP","target":"Single","range":"10 squares","baseEffect":{"desc":"Grants the target Revivify(5)."}}},"value":"regen","tags":["Secondary","Magic"]},{"name":"Presence of Mind","job":"whm","levels":{"30":{"baseEffect":{"desc":"Immediately use one of your magic abilities"},"limitation":"Once per phase"}},"value":"presenceofMind","tags":["Secondary"]},{"name":"Scathe","job":"blm","levels":{"30":{"cost":"1 MP","target":"Single","range":"10 squares","baseEffect":{"flat":3,"desc":"Deals 3 damage to the target"}},"50":{"cost":"1 MP","target":"Single","range":"10 squares","baseEffect":{"flat":5,"desc":"Deals 5 damage to the target"}}},"value":"scathe","tags":["Secondary","Magic"]},{"name":"Transpose","job":"blm","levels":{"30":{"baseEffect":{"desc":"Removes Umbral Ice and grants Astral Fire, or removes Astral Fire and grants Umbral Ice. Transpose can only be used once per turn."}}},"value":"transpose","tags":["Secondary"]},{"name":"Manafont","job":"blm","levels":{"30":{"baseEffect":{"desc":"Restores 2 MP"},"limitation":"Once per phase"}},"value":"manafont","tags":["Secondary"]},{"name":"Manaward","job":"blm","levels":{"30":{"baseEffect":{"desc":"Grants a barrier of 3 HP"},"limitation":"Once per phase"},"50":{"baseEffect":{"desc":"Grants a barrier of 5 HP"},"limitation":"Once per phase"}},"value":"manaward","tags":["Secondary"]},{"name":"Atherial Manipulation","job":"blm","levels":{"50":{"baseEffect":{"desc":"Move up to 5 squares"},"limitation":"Once per phase"}},"value":"atherialManipulation","tags":["Secondary"]}];
+    const instantAbilities = [{"name":"Feint","job":["drg"],"levels":{"30":{"target":"Single","trigger":"Immediately before an ability used by an enemy is resolved","range":"2 squares","baseEffect":{"desc":"Reduces the damage dealt by the abilities of the enemy that triggerd this ability by 2 until the end of this turn."},"limitation":"Once per phase"},"50":{"target":"Single","trigger":"Immediately before an ability used by an enemy is resolved","range":"2 squares","baseEffect":{"desc":"Reduces the damage dealt by the abilities of the enemy that triggerd this ability by 3 until the end of this turn."},"limitation":"Once per phase"}},"value":"feint","tags":["Instant","Physical"]},{"name":"Second Wind","job":["drg"],"levels":{"30":{"trigger":"When any character finishes their turn","baseEffect":{"dice":1,"flat":2,"desc":"Restores 1d6+2 HP"},"limitation":"Once per phase"},"50":{"trigger":"When any character finishes their turn","baseEffect":{"dice":2,"flat":3,"desc":"Restores 2d6+3 HP"},"limitation":"Once per phase"}},"value":"secondWind","tags":["Instant"]},{"name":"Arm's Length","job":["drg","war"],"levels":{"40":{"trigger":"Immediately before an ability is resolved.","baseEffect":{"desc":"You are immune to all movement effects until the end of this turn"},"limitation":"Once per phase"}},"value":"armsLength","tags":["Instant"]},{"name":"Swiftcast","job":["blm","whm"],"levels":{"30":{"trigger":"When any character finishes their turn","baseEffect":{"desc":"Immediately use one of your magic abilities"},"limitation":"Once per phase"}},"value":"swiftcast","tags":["Instant"]},{"name":"Surecast","job":["blm","whm"],"levels":{"50":{"trigger":"Immediately before an ability is resolved.","baseEffect":{"desc":"You are immune to all movement effects until the end of this turn"},"limitation":"Once per phase"}},"value":"surecast","tags":["Instant"]},{"name":"Rescue","job":["whm"],"levels":{"50":{"trigger":"When an enemy begins or ends their turn.","target":"Single","range":"5 squares","baseEffect":{"desc":"Move a consenting ally to an empty square adjacent to you"},"limitation":"Once per phase"}},"value":"rescue","tags":["Instant"]},{"name":"Addle","job":["blm"],"levels":{"30":{"trigger":"Immediately before an ability used by an enemy is resolved","target":"The enemy that triggered this ability","range":"5 squares","baseEffect":{"desc":"Reduces the damage dealt by the abilities of the enemy that triggerd this ability by 2 until the end of this turn."},"limitation":"Once per phase"},"50":{"trigger":"Immediately before an ability used by an enemy is resolved","target":"The enemy that triggered this ability","range":"5 squares","baseEffect":{"desc":"Reduces the damage dealt by the abilities of the enemy that triggerd this ability by 3 until the end of this turn."},"limitation":"Once per phase"}},"value":"rescue","tags":["Instant"]},{"name":"Reprisal","job":["war"],"levels":{"30":{"target":"All Enemies Within Range","trigger":"Immediately before an ability used by an enemy within 2 squares is resolved","range":"A 5x5 area centered on this character","baseEffect":{"desc":"Reduces the damage dealt by the abilities of all targets by 2 until the end of this Round."},"limitation":"Once per phase"},"50":{"target":"All Enemies Within Range","trigger":"Immediately before an ability used by an enemy within 2 squares is resolved","range":"A 5x5 area centered on this character","baseEffect":{"desc":"Reduces the damage dealt by the abilities of all targets by 3 until the end of this Round."},"limitation":"Once per phase"}},"value":"reprisal","tags":["Instant"]},{"name":"Provoke","job":["war"],"levels":{"30":{"target":"The enemy that triggered this ability","trigger":"When an enemy begins their turn.","range":"10 squares","baseEffect":{"desc":"Inflicts Enmity on the target."},"limitation":"Once per phase"}},"value":"provoke","tags":["Instant"]},{"name":"Interject","job":["war"],"levels":{"30":{"target":"The enemy that triggered this ability","trigger":"When an adjecent enemy uses an invoked ability, or is using an invoked ability to generate a marker","range":"1 square","baseEffect":{"desc":"Interrupts the invoked ability that triggered this ability, negating it completely"},"limitation":"Once per phase"}},"value":"interject","tags":["Instant"]},{"name":"Thrill of Battle","job":["war"],"levels":{"30":{"trigger":"Immediately before you take damage","range":"1 square","baseEffect":{"dice":1,"flat":2,"desc":"Restores 1d6+2 HP and grants a barrier equaling the amount of HP restored that exceeds your max HP."},"limitation":"Once per phase"},"50":{"trigger":"Immediately before you take damage","baseEffect":{"dice":2,"flat":3,"desc":"Restores 2d6+3 HP and grants a barrier equaling the amount of HP restored that exceeds your max HP."},"limitation":"Once per phase"}},"value":"thrillOfBattle","tags":["Instant"]},{"name":"Vengence","job":["war"],"levels":{"40":{"trigger":"Immediately before you take damage","baseEffect":{"dice":1,"desc":"Reduces the damage you take from the ability that triggered this ability by 1d6. If this ability was triggered by a physical ability, deals half of all damage prevented (rounded up) to the character who used it."},"limitation":"Once per phase"},"50":{"trigger":"Immediately before you take damage","baseEffect":{"dice":2,"desc":"Reduces the damage you take from the ability that triggered this ability by 2d6. If this ability was triggered by a physical ability, deals half of all damage prevented (rounded up) to the character who used it."},"limitation":"Once per phase"}},"value":"vengence","tags":["Instant"]}];
+    const limitBreaks = [{"name":"Limit Break: Dragonsong Dive","job":"drg","levels":{"30":{"trigger":"Any Time","target":"Single","range":"5","baseEffect":{"damage":"6d6","dice":6,"desc":"Deals 6d6 damage to the target, then move to an empty square adjacent to the target if one is available. This ability can be used to evade enemy attacks."}},"40":{"trigger":"Any Time","target":"Single","range":"5","baseEffect":{"damage":"8d6","dice":8,"desc":"Deals 8d6 damage to the target, then move to an empty square adjacent to the target if one is available. This ability can be used to evade enemy attacks."}},"50":{"trigger":"Any Time","target":"Single","range":"5","baseEffect":{"damage":"10d6","dice":10,"desc":"Deals 10d6 damage to the target, then move to an empty square adjacent to the target if one is available. This ability can be used to evade enemy attacks."}}},"value":"dragonsongDive","tags":["Limit Break","Physical"]},{"name":"Limit Break: Meteor","job":"blm","levels":{"30":{"trigger":"Any Time","target":"Single","range":"A 5x5 area within 10 squares of this character","baseEffect":{"damage":"4d6","dice":4,"desc":"Deals 4d6 damage to all targets. While under the effect of Astral Fire, Meteor deals an additional 1d6 damage"}},"40":{"trigger":"Any Time","target":"Single","range":"A 5x5 area within 10 squares of this character","baseEffect":{"damage":"5d6","dice":5,"desc":"Deals 5d6 damage to all targets. While under the effect of Astral Fire, Meteor deals an additional 1d6 damage"}},"50":{"trigger":"Any Time","target":"Single","range":"A 5x5 area within 10 squares of this character","baseEffect":{"damage":"6d6","dice":6,"desc":"Deals 6d6 damage to all targets. While under the effect of Astral Fire, Meteor deals an additional 2d6 damage"}}},"value":"meteor","tags":["Limit Break","Magic","Fire-Aspected"]},{"name":"Limit Break: Land Walker","job":"war","levels":{"30":{"trigger":"Immediately before one or more allied adventurers take damage","baseEffect":{"dice":0,"desc":"Makes you the sole target of all damage inflicted by the effect that triggered Land Walker and halves the damage you take (rounded up). If an ability triggered Land Walker, the character that used that ability suffers damage equal to the amount of HP you lost."}}},"value":"landWalker","tags":["Limit Break","Physical"]},{"name":"Limit Break: Pulse of Life","job":"whm","levels":{"30":{"trigger":"Any Time","target":"All allied adventurers within range","range":"The entire encounter map*","baseEffect":{"dice":0,"desc":"Removes all enfeeblements from all targets and fully restores their HP and MP. Pulse of Life can remove Knocked Out, Weakness, and Brink of Death. This ability also targets characters not present on the encounter map. When doing so, place them in an empty sqyare within 5 squares of you after resolving the ability's effects"}}},"value":"pulseOfLife","tags":["Limit Break","Magic"]}];
+    const jobs = [{"name":"Black Mage","role":"DPS","value":"blm"},{"name":"Dragoon","role":"DPS","value":"drg"},{"name":"White Mage","role":"Healer","value":"whm"},{"name":"Warrior","role":"TANK","value":"war"}];
+    const levels = [{"name":"LV30","value":"30"},{"name":"LV40","value":"40"},{"name":"LV50","value":"50"}];
+    const races = [{"name":"Hyur","value":"hyur"},{"name":"Miq O'te","value":"miqote"},{"name":"Elezen","value":"elezen"},{"name":"Roegadyn","value":"roegadyn"},{"name":"Lalafell","value":"lalafell"},{"name":"Viera","value":"viera"},{"name":"Hrothgar","value":"hrothgar"},{"name":"Garlean","value":"garlean"},{"name":"Moogle","value":"moogle"},{"name":"Bangaa","value":"bangaa"},{"name":"Seeq","value":"seeq"},{"name":"Garif","value":"garif"}];
+
+
+    const section_attribute = (section, id, field) => `repeating_${section}_${id}_${field}`;
+    const toggle_attribute = (attr) => {
+      getAttrs([attr], (values) => {
+        let newVal = values[attr] == 0 ? 1 : 0;
+        const output = {};
+        output[attr] = newVal
+        setAttrs(output);
+      });
+    };
+
+    const get_leveled_obj = (currentLevel, levelObject) => {
+      // gets the highest level version for inputed level
+      let stringLevel = `${currentLevel}`;
+      switch(stringLevel){
+        case "30":
+          return levelObject[stringLevel] ?? {};
+        case "40":
+          return levelObject[stringLevel] ?? levelObject["30"] ?? {};
+        case "50":
+          return levelObject[stringLevel] ?? levelObject["40"] ?? levelObject["30"] ?? {};
+        default:
+          return {};
+      }
+    };
+    const has_level = (levels, level) => {
+      let stringLevel = `${level}`
+      switch(stringLevel){
+        case "30":
+          return stringLevel in levels;
+        case "40":
+          return stringLevel in levels || "30" in levels;
+        case "50":
+          return stringLevel in levels || "40" in levels || "30" in levels;
+        default:
+          return false;
+      }
+    }
+
+    const getComboOptions = (leveledAbility, level) => {
+     const comboOptions = [];
+     if(!leveledAbility?.combo) return comboOptions
+     Object.keys(leveledAbility?.combo).forEach(key=>{
+         if(get_leveled_obj(level, leveledAbility?.combo[key])){
+           leveledAbility.combo[key].value = key;
+           comboOptions.push(leveledAbility.combo[key]);
+         }
+     })
+     return comboOptions;
+    }
+
+    const getAbilityOutputs = (level, ability, attrprefix, values) => {
+     const outputs = {};
+     const leveledAbility = get_leveled_obj(level, ability.levels);
+     outputs[`${attrprefix}name`] = leveledAbility?.upgradeName ? leveledAbility?.upgradeName : (ability.name ? ability.name : '');
+     outputs[`${attrprefix}show-name`] = ability.name ? 1 : 0;
+     outputs[`${attrprefix}value`] = ability.value ? ability.value : '';
+     outputs[`${attrprefix}show-trigger`] = leveledAbility?.trigger ? 1 : 0;
+     outputs[`${attrprefix}cost`] = leveledAbility?.cost ? leveledAbility?.cost : '';
+     outputs[`${attrprefix}show-cost`] = leveledAbility?.cost ? 1 : 0;
+     outputs[`${attrprefix}trigger`] = leveledAbility?.trigger ? leveledAbility?.trigger : '';
+     outputs[`${attrprefix}tags`] = ability.tags ? ability.tags?.join(', ') : '';
+     outputs[`${attrprefix}target`] = leveledAbility?.target ? leveledAbility?.target : '';
+     outputs[`${attrprefix}show-target`] = leveledAbility?.target ? 1 : 0;
+     outputs[`${attrprefix}range`] = leveledAbility?.range ? leveledAbility?.range : '';
+     outputs[`${attrprefix}show-range`] = leveledAbility?.range ? 1 : 0;
+     outputs[`${attrprefix}check`] = leveledAbility?.check ? `${leveledAbility?.check} ${leveledAbility?.check === "Special"? '(d20)' :`(d20${'+'+values[leveledAbility?.check?.toLowerCase()]})`}` : '';
+     outputs[`${attrprefix}show-check`] = leveledAbility?.check ? 1 : 0;
+     outputs[`${attrprefix}cr`] =  leveledAbility?.cr  ? `Target's ${leveledAbility?.cr == 'Defense' ? 'Defense' : 'Magic Defense'}` : '';
+     outputs[`${attrprefix}show-cr`] =  leveledAbility?.cr  ? 1 : 0;
+     outputs[`${attrprefix}base-effect`] = leveledAbility?.baseEffect?.desc ? leveledAbility?.baseEffect?.desc : '';
+     outputs[`${attrprefix}base-effect-damage`] = leveledAbility?.baseEffect?.damage ? leveledAbility?.baseEffect?.damage : '';
+     outputs[`${attrprefix}direct-hit-damage`] = leveledAbility?.directHit?.damage ? leveledAbility?.directHit?.damage : '';
+     outputs[`${attrprefix}direct-hit`] = leveledAbility?.directHit?.desc ? leveledAbility?.directHit?.desc : '';
+     outputs[`${attrprefix}show-direct-hit`] = leveledAbility?.directHit?.desc ? 1 : 0;
+     outputs[`${attrprefix}limitation`] = leveledAbility?.limitation ? leveledAbility?.limitation : '';
+     outputs[`${attrprefix}show-limitation`] = leveledAbility?.limitation ? 1 : 0;
+     return outputs;
+    }
+
+    const createUniqueID = row_ids => {
+      row_ids = Array.ids ? row_ids : [];
+      let generated;
+      while (!generated || row_ids.includes(generated)) {
+          generated = generateRowID();
+      }
+      row_ids.push(generated);
+      return generated;
+    }
+    on('sheet:opened', () =>{
+    });
+
+    function uuidv4() {
+    return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
+      (+c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> +c / 4).toString(16)
+    )};
+
+    const attributes = ['str', 'dex', 'vit', 'int', 'mnd']
+    attributes.forEach(attribute => {
+      on(`clicked:${attribute}`, () => {
+        const name = attribute.toUpperCase()
+        startRoll(`&{template:default} {{name=${name} Roll}} {{${attribute}=[[@{${attribute}}]]}} {{roll=[[1d20+@{${attribute}}]]}}`, roll => {
+          finishRoll(roll.rollId);
+        });
+      });
+    });
+    const secondaryAttributes = ['def', 'magdef', 'vig', 'speed']
+    secondaryAttributes.forEach(attribute => {
+      on(`clicked:${attribute}`, () => {
+        let display = '';
+        switch(attribute){
+          case 'def':
+            display = `Defense`;
+            break;
+          case 'magdef':
+            display = `Magic Defense`;
+            break;
+          case 'vig':
+            display = `Vigilance`;
+            break;
+          case 'speed':
+            display = `Speed`;
+            break;
+          default:
+            return;
+        }
+        startRoll(`&{template:default} {{name=${display}}} {{${display}=[[@{${attribute}}]]}}`, roll => {
+          finishRoll(roll.rollId);
+        });
+      });
+    });
+    const buttons = ['test'];
+    on('change:character_name sheet:opened', () => {
+     getAttrs(['character_name'], values => {
+       const name = values.character_name;
+       const output = {};
+       buttons.forEach(button => {
+           output[`${button}_attribute`] = `~${name}|${button}`;
+       });
+       setAttrs(output);
+     });
+    });
+    on(`clicked:maxmp`, ()=>{
+      startRoll(`&{template:default} {{name=MP}} {{Max=[[@{maxmp}]]}} {{Current=[[@{currentmp}]]}}`, roll => {
+          finishRoll(roll.rollId);
+      });
+    });
+    on(`clicked:maxhp`, ()=>{
+      startRoll(`&{template:default} {{name=HP}} {{Max=[[@{maxhp}]]}} {{Current=[[@{currenthp}]]}} {{Barrier=[[@{currentbarrier}]]}}`, roll => {
+          finishRoll(roll.rollId);
+      });
+    });
+    on("clicked:repeating_effects:roll", (event) => {
+        const rowid = event.sourceAttribute.split('_')[2];
+        getAttrs([section_attribute('effects', rowid, 'value'), 'level'], (values) => {
+            const currentLevel = values.level;
+            const effectObj = effects.filter(x=>x.value === values[`${section_attribute('effects', rowid, 'value')}`])[0]
+            if(effectObj){
+              const leveledEffect = get_leveled_obj(values.level, effectObj.levels);
+              const description = leveledEffect.baseEffect.desc;
+              const title = effectObj.name;
+              const template = `&{template:effect} {{title=${title}}} {{desc=${description}}}`;
+              startRoll(template, (results) => {
+            finishRoll(
+                results.rollId
+            );
+        });
+            }
+        });
+    });
+
+     on("clicked:limitroll", (event) => {
+    // Check the current value of the hidden attribute.
+        getAttrs([...attributes, 'limit-value', 'level', 'character_name'], (values) => {
+           const currentLevel = values.level;
+           const ability = limitBreaks.filter(x=>x.value === values['limit-value'])[0]
+           const leveledAbility = get_leveled_obj(values.level, ability.levels);
+           const name = ability.name ?? '';
+           const tags = ability.tags?.join(', ') ?? '';
+           const target = leveledAbility?.target ?? '';
+           const range = leveledAbility?.range ?? '';
+           const cost = leveledAbility?.cost ? leveledAbility?.cost : '';
+           const trigger = leveledAbility?.trigger ? leveledAbility?.trigger : '';
+           const attribute = leveledAbility?.check?.toLowerCase();
+           const checkRoll = attribute == 'special' ? '[[1d20]]' : attribute ?  `[[1d20+@{${attribute}}]]` : '';
+           const check =  leveledAbility?.check ? `${leveledAbility?.check} (d20+${values[attribute]})` : '';
+           const cr = leveledAbility?.cr ?  `Target's ${leveledAbility?.cr == 'Defense' ? 'Defense' : 'Magic Defense'}` : '';
+           const baseEffectDesc = leveledAbility?.baseEffect?.desc ?? '';
+           const baseDice = leveledAbility?.baseEffect?.dice ? leveledAbility?.baseEffect?.dice : 0;
+           const baseFlat = leveledAbility?.baseEffect?.flat ? leveledAbility?.baseEffect?.flat : 0;
+           const directDice = leveledAbility?.directHit?.dice ? leveledAbility?.directHit?.dice : 0;
+           const directFlat = leveledAbility?.directHit?.flat ? leveledAbility?.directHit?.flat : 0;
+           const baseEffectDamage = (!baseDice && !baseFlat) ? '' : (baseDice) ? `[[${baseDice}d6+${baseFlat}]]` : `[[${baseFlat}]]` ;
+           const directHitDamage =  (baseDice || directDice) ? `[[${baseDice+directDice}d6+${baseFlat+directFlat}]]` : `[[${baseFlat}]]`;
+           const critHitDamage =  (baseDice || directDice ) ? `[[${(baseDice+directDice)*2}d6+${baseFlat+directFlat}]]` : `[[${baseFlat+directFlat}]]`;
+           const directHitDesc= leveledAbility?.directHit?.desc ?? '';
+           const limitation = leveledAbility?.limitation ?? '';
+           const showLimitation = leveledAbility?.limitation ? true : false;
+           const comboOptions = getComboOptions(leveledAbility, currentLevel);
+           let hasComboOptionOne;
+           let comboOptionOneName;
+           let comboOptionOneValue;
+           let comboOneAct;
+           let comboTwoAct;
+           let hasComboOptionTwo;
+           let comboOptionTwoName;
+           let comboOptionTwoValue;
+
+           if(comboOptions.length > 0){
+             for(let i=0; i< comboOptions.length; i++){
+               if(i==0){
+                 hasComboOptionOne = true;
+                 comboOneAct = section_attribute('primary-abilities', rowid, 'combo-one')
+                 comboOptionOneName = comboOptions[i].name
+                 comboOptionOneValue = comboOptions[i].value
+               }
+               else if(i==1){
+                 hasComboOptionTwo = true;
+                 comboOptionTwoName = comboOptions[i].name
+                 comboOptionTwoValue = comboOptions[i].value
+                 comboTwoAct = section_attribute('primary-abilities', rowid, 'combo-two')
+               }
+             }
+           }
+           const template = `&{template:primary-ability} {{currentLevel=${currentLevel}}} {{tags=${tags}}} {{target=${target}}} {{range=${range}}} {{attribute=${leveledAbility?.check}}} {{checkRoll=${checkRoll}}} {{cr=${cr}}} {{baseEffectDesc=${baseEffectDesc}}} {{baseEffectDamage=${baseEffectDamage}}} {{directHitDamage=${directHitDamage}}} {{critHitDamage=${critHitDamage}}} {{directHitDesc=${directHitDesc}}} ${showLimitation ? `{{limitation=${limitation}}}` : ''} {{name=${name}}} ${hasComboOptionOne ? `{{comboOptionOneName=${comboOptionOneName}}} {{comboOptionOneValue=${comboOptionOneValue}}}` : ''} ${hasComboOptionTwo ? `{{comboOptionTwoName=${comboOptionTwoName}}} {{comboOptionTwoValue=${comboOptionTwoValue}}}` : ''} {{comboOneAct=${`~${values.character_name}|${comboOneAct}`}}} {{comboTwoAct=${`~${values.character_name}|${comboTwoAct}`}}} {{cost=${cost}}} {{trigger=${trigger}}}`;
+           startRoll(template, (results) => {
+             finishRoll(
+                 results.rollId
+             );
+           });
+        });
+    });
+     on("clicked:repeating_instant-abilities:roll", (event) => {
+    // Check the current value of the hidden attribute.
+        const rowid = event.sourceAttribute.split('_')[2];
+        getAttrs([...attributes, section_attribute('instant-abilities', rowid, 'value'), 'level', 'character_name'], (values) => {
+           const currentLevel = values.level;
+           const ability = instantAbilities.filter(x=>x.value === values[`${section_attribute('instant-abilities', rowid, 'value')}`])[0]
+           const leveledAbility = get_leveled_obj(values.level, ability.levels);
+           const name = ability.name ?? '';
+           const tags = ability.tags?.join(', ') ?? '';
+           const target = leveledAbility?.target ?? '';
+           const range = leveledAbility?.range ?? '';
+           const cost = leveledAbility?.cost ? leveledAbility?.cost : '';
+           const trigger = leveledAbility?.trigger ? leveledAbility?.trigger : '';
+           const attribute = leveledAbility?.check?.toLowerCase();
+           const checkRoll = attribute == 'special' ? '[[1d20]]' : attribute ?  `[[1d20+@{${attribute}}]]` : '';
+           const check =  leveledAbility?.check ? `${leveledAbility?.check} (d20+${values[attribute]})` : '';
+           const cr = leveledAbility?.cr ?  `Target's ${leveledAbility?.cr == 'Defense' ? 'Defense' : 'Magic Defense'}` : '';
+           const baseEffectDesc = leveledAbility?.baseEffect?.desc ?? '';
+           const baseDice = leveledAbility?.baseEffect?.dice ? leveledAbility?.baseEffect?.dice : 0;
+           const baseFlat = leveledAbility?.baseEffect?.flat ? leveledAbility?.baseEffect?.flat : 0;
+           const directDice = leveledAbility?.directHit?.dice ? leveledAbility?.directHit?.dice : 0;
+           const directFlat = leveledAbility?.directHit?.flat ? leveledAbility?.directHit?.flat : 0;
+           const baseEffectDamage = (!baseDice && !baseFlat) ? '' : (baseDice) ? `[[${baseDice}d6+${baseFlat}]]` : `[[${baseFlat}]]` ;
+           const directHitDamage =  (baseDice || directDice) ? `[[${baseDice+directDice}d6+${baseFlat+directFlat}]]` : `[[${baseFlat}]]`;
+           const critHitDamage =  (baseDice || directDice ) ? `[[${(baseDice+directDice)*2}d6+${baseFlat+directFlat}]]` : `[[${baseFlat+directFlat}]]`;
+           const directHitDesc= leveledAbility?.directHit?.desc ?? '';
+           const limitation = leveledAbility?.limitation ?? '';
+           const showLimitation = leveledAbility?.limitation ? true : false;
+           const comboOptions = getComboOptions(leveledAbility, currentLevel);
+           let hasComboOptionOne;
+           let comboOptionOneName;
+           let comboOptionOneValue;
+           let comboOneAct;
+           let comboTwoAct;
+           let hasComboOptionTwo;
+           let comboOptionTwoName;
+           let comboOptionTwoValue;
+
+           if(comboOptions.length > 0){
+             for(let i=0; i< comboOptions.length; i++){
+               if(i==0){
+                 hasComboOptionOne = true;
+                 comboOneAct = section_attribute('primary-abilities', rowid, 'combo-one')
+                 comboOptionOneName = comboOptions[i].name
+                 comboOptionOneValue = comboOptions[i].value
+               }
+               else if(i==1){
+                 hasComboOptionTwo = true;
+                 comboOptionTwoName = comboOptions[i].name
+                 comboOptionTwoValue = comboOptions[i].value
+                 comboTwoAct = section_attribute('primary-abilities', rowid, 'combo-two')
+               }
+             }
+           }
+           const template = `&{template:primary-ability} {{currentLevel=${currentLevel}}} {{tags=${tags}}} {{target=${target}}} {{range=${range}}} {{attribute=${leveledAbility?.check}}} {{checkRoll=${checkRoll}}} {{cr=${cr}}} {{baseEffectDesc=${baseEffectDesc}}} {{baseEffectDamage=${baseEffectDamage}}} {{directHitDamage=${directHitDamage}}} {{critHitDamage=${critHitDamage}}} {{directHitDesc=${directHitDesc}}} ${showLimitation ? `{{limitation=${limitation}}}` : ''} {{name=${name}}} ${hasComboOptionOne ? `{{comboOptionOneName=${comboOptionOneName}}} {{comboOptionOneValue=${comboOptionOneValue}}}` : ''} ${hasComboOptionTwo ? `{{comboOptionTwoName=${comboOptionTwoName}}} {{comboOptionTwoValue=${comboOptionTwoValue}}}` : ''} {{comboOneAct=${`~${values.character_name}|${comboOneAct}`}}} {{comboTwoAct=${`~${values.character_name}|${comboTwoAct}`}}} {{cost=${cost}}} {{trigger=${trigger}}}`;
+           startRoll(template, (results) => {
+             finishRoll(
+                 results.rollId
+             );
+           });
+        });
+    });
+     on("clicked:repeating_secondary-abilities:roll", (event) => {
+    // Check the current value of the hidden attribute.
+        const rowid = event.sourceAttribute.split('_')[2];
+        getAttrs([...attributes, section_attribute('secondary-abilities', rowid, 'value'), 'level', 'character_name'], (values) => {
+           const currentLevel = values.level;
+           const ability = secondaryAbilities.filter(x=>x.value === values[`${section_attribute('secondary-abilities', rowid, 'value')}`])[0]
+           const leveledAbility = get_leveled_obj(values.level, ability.levels);
+           const name = ability.name ?? '';
+           const tags = ability.tags?.join(', ') ?? '';
+           const target = leveledAbility?.target ?? '';
+           const range = leveledAbility?.range ?? '';
+           const cost = leveledAbility?.cost ? leveledAbility?.cost : '';
+           const trigger = leveledAbility?.trigger ? leveledAbility?.trigger : '';
+           const attribute = leveledAbility?.check?.toLowerCase();
+           const checkRoll = attribute == 'special' ? '[[1d20]]' : attribute ?  `[[1d20+@{${attribute}}]]` : '';
+           const check =  leveledAbility?.check ? `${leveledAbility?.check} (d20+${values[attribute]})` : '';
+           const cr = leveledAbility?.cr ?  `Target's ${leveledAbility?.cr == 'Defense' ? 'Defense' : 'Magic Defense'}` : '';
+           const baseEffectDesc = leveledAbility?.baseEffect?.desc ?? '';
+           const baseDice = leveledAbility?.baseEffect?.dice ? leveledAbility?.baseEffect?.dice : 0;
+           const baseFlat = leveledAbility?.baseEffect?.flat ? leveledAbility?.baseEffect?.flat : 0;
+           const directDice = leveledAbility?.directHit?.dice ? leveledAbility?.directHit?.dice : 0;
+           const directFlat = leveledAbility?.directHit?.flat ? leveledAbility?.directHit?.flat : 0;
+           const baseEffectDamage = (!baseDice && !baseFlat) ? '' : (baseDice) ? `[[${baseDice}d6+${baseFlat}]]` : `[[${baseFlat}]]` ;
+           const directHitDamage =  (baseDice || directDice) ? `[[${baseDice+directDice}d6+${baseFlat+directFlat}]]` : `[[${baseFlat}]]`;
+           const critHitDamage =  (baseDice || directDice ) ? `[[${(baseDice+directDice)*2}d6+${baseFlat+directFlat}]]` : `[[${baseFlat+directFlat}]]`;
+           const directHitDesc= leveledAbility?.directHit?.desc ?? '';
+           const limitation = leveledAbility?.limitation ?? '';
+           const showLimitation = leveledAbility?.limitation ? true : false;
+           const comboOptions = getComboOptions(leveledAbility, currentLevel);
+           let hasComboOptionOne;
+           let comboOptionOneName;
+           let comboOptionOneValue;
+           let comboOneAct;
+           let comboTwoAct;
+           let hasComboOptionTwo;
+           let comboOptionTwoName;
+           let comboOptionTwoValue;
+
+           if(comboOptions.length > 0){
+             for(let i=0; i< comboOptions.length; i++){
+               if(i==0){
+                 hasComboOptionOne = true;
+                 comboOneAct = section_attribute('primary-abilities', rowid, 'combo-one')
+                 comboOptionOneName = comboOptions[i].name
+                 comboOptionOneValue = comboOptions[i].value
+               }
+               else if(i==1){
+                 hasComboOptionTwo = true;
+                 comboOptionTwoName = comboOptions[i].name
+                 comboOptionTwoValue = comboOptions[i].value
+                 comboTwoAct = section_attribute('primary-abilities', rowid, 'combo-two')
+               }
+             }
+           }
+           const template = `&{template:primary-ability} {{currentLevel=${currentLevel}}} {{tags=${tags}}} {{target=${target}}} {{range=${range}}} {{attribute=${leveledAbility?.check}}} {{checkRoll=${checkRoll}}} {{cr=${cr}}} {{baseEffectDesc=${baseEffectDesc}}} {{baseEffectDamage=${baseEffectDamage}}} {{directHitDamage=${directHitDamage}}} {{critHitDamage=${critHitDamage}}} {{directHitDesc=${directHitDesc}}} ${showLimitation ? `{{limitation=${limitation}}}` : ''} {{name=${name}}} ${hasComboOptionOne ? `{{comboOptionOneName=${comboOptionOneName}}} {{comboOptionOneValue=${comboOptionOneValue}}}` : ''} ${hasComboOptionTwo ? `{{comboOptionTwoName=${comboOptionTwoName}}} {{comboOptionTwoValue=${comboOptionTwoValue}}}` : ''} {{comboOneAct=${`~${values.character_name}|${comboOneAct}`}}} {{comboTwoAct=${`~${values.character_name}|${comboTwoAct}`}}} {{cost=${cost}}} {{trigger=${trigger}}}`;
+           startRoll(template, (results) => {
+             finishRoll(
+                 results.rollId
+             );
+           });
+        });
+    });
+    on("clicked:repeating_primary-abilities:roll", (event) => {
+    // Check the current value of the hidden attribute.
+        const rowid = event.sourceAttribute.split('_')[2];
+        getAttrs([...attributes, section_attribute('primary-abilities', rowid, 'value'), 'level', 'character_name'], (values) => {
+           const currentLevel = values.level;
+           const ability = primaryAbilities.filter(x=>x.value === values[`${section_attribute('primary-abilities', rowid, 'value')}`])[0]
+           const leveledAbility = get_leveled_obj(values.level, ability.levels);
+           const name = ability.name ?? '';
+           const tags = ability.tags?.join(', ') ?? '';
+           const target = leveledAbility?.target ?? '';
+           const range = leveledAbility?.range ?? '';
+           const cost = leveledAbility?.cost ? leveledAbility?.cost : '';
+           const trigger = leveledAbility?.trigger ? leveledAbility?.trigger : '';
+           const attribute = leveledAbility?.check?.toLowerCase();
+           const checkRoll = attribute == 'special' ? '[[1d20]]' : attribute ?  `[[1d20+@{${attribute}}]]` : '';
+           const check =  leveledAbility?.check ? `${leveledAbility?.check} (d20+${values[attribute]})` : '';
+           const cr = leveledAbility?.cr ?  `Target's ${leveledAbility?.cr == 'Defense' ? 'Defense' : 'Magic Defense'}` : '';
+           const baseEffectDesc = leveledAbility?.baseEffect?.desc ?? '';
+           const baseDice = leveledAbility?.baseEffect?.dice ? leveledAbility?.baseEffect?.dice : 0;
+           const baseFlat = leveledAbility?.baseEffect?.flat ? leveledAbility?.baseEffect?.flat : 0;
+           const directDice = leveledAbility?.directHit?.dice ? leveledAbility?.directHit?.dice : 0;
+           const directFlat = leveledAbility?.directHit?.flat ? leveledAbility?.directHit?.flat : 0;
+           const baseEffectDamage = (!baseDice && !baseFlat) ? '' : (baseDice) ? `[[${baseDice}d6+${baseFlat}]]` : `[[${baseFlat}]]` ;
+           const directHitDamage =  (baseDice || directDice) ? `[[${baseDice+directDice}d6+${baseFlat+directFlat}]]` : `[[${baseFlat}]]`;
+           const critHitDamage =  (baseDice || directDice ) ? `[[${(baseDice+directDice)*2}d6+${baseFlat+directFlat}]]` : `[[${baseFlat+directFlat}]]`;
+           const directHitDesc= leveledAbility?.directHit?.desc ?? '';
+           const limitation = leveledAbility?.limitation ?? '';
+           const showLimitation = leveledAbility?.limitation ? true : false;
+           const comboOptions = getComboOptions(leveledAbility, currentLevel);
+           let hasComboOptionOne;
+           let comboOptionOneName;
+           let comboOptionOneValue;
+           let comboOneAct;
+           let comboTwoAct;
+           let hasComboOptionTwo;
+           let comboOptionTwoName;
+           let comboOptionTwoValue;
+
+           if(comboOptions.length > 0){
+             for(let i=0; i< comboOptions.length; i++){
+               if(i==0){
+                 hasComboOptionOne = true;
+                 comboOneAct = section_attribute('primary-abilities', rowid, 'combo-one')
+                 comboOptionOneName = comboOptions[i].name
+                 comboOptionOneValue = comboOptions[i].value
+               }
+               else if(i==1){
+                 hasComboOptionTwo = true;
+                 comboOptionTwoName = comboOptions[i].name
+                 comboOptionTwoValue = comboOptions[i].value
+                 comboTwoAct = section_attribute('primary-abilities', rowid, 'combo-two')
+               }
+             }
+           }
+           const template = `&{template:primary-ability} {{currentLevel=${currentLevel}}} {{tags=${tags}}} {{target=${target}}} {{range=${range}}} {{attribute=${leveledAbility?.check}}} {{checkRoll=${checkRoll}}} {{cr=${cr}}} {{baseEffectDesc=${baseEffectDesc}}} {{baseEffectDamage=${baseEffectDamage}}} {{directHitDamage=${directHitDamage}}} {{critHitDamage=${critHitDamage}}} {{directHitDesc=${directHitDesc}}} ${showLimitation ? `{{limitation=${limitation}}}` : ''} {{name=${name}}} ${hasComboOptionOne ? `{{comboOptionOneName=${comboOptionOneName}}} {{comboOptionOneValue=${comboOptionOneValue}}}` : ''} ${hasComboOptionTwo ? `{{comboOptionTwoName=${comboOptionTwoName}}} {{comboOptionTwoValue=${comboOptionTwoValue}}}` : ''} {{comboOneAct=${`~${values.character_name}|${comboOneAct}`}}} {{comboTwoAct=${`~${values.character_name}|${comboTwoAct}`}}} {{cost=${cost}}} {{trigger=${trigger}}}`;
+           startRoll(template, (results) => {
+             finishRoll(
+                 results.rollId
+             );
+           });
+        });
+    });
+    const fireComboAction = (index, rowid)=>{
+    getAttrs([...attributes, section_attribute('primary-abilities', rowid, 'value'), 'level', 'character_name'], (values) => {
+           const currentLevel = values.level;
+           const ability = primaryAbilities.filter(x=>x.value === values[`${section_attribute('primary-abilities', rowid, 'value')}`])[0]
+           const leveledAbility = get_leveled_obj(values.level, ability.levels);
+           const comboAbility = getComboOptions(leveledAbility, currentLevel)[index];
+           const leveledComboAbility = get_leveled_obj(values.level, comboAbility.levels);
+
+           const name = comboAbility.name;
+           const tags = comboAbility.tags?.join(', ');
+           const target = leveledComboAbility.target;
+           const range = `${leveledComboAbility.range} square(s)`;
+           const attribute = leveledComboAbility.check.toLowerCase();
+           const checkRoll = `[[1d20+@{${attribute}}]]`
+           const check = `${leveledComboAbility.check} (d20+${values[attribute]})`;
+           const cr = `Target's ${leveledComboAbility.cr == 'def' ? 'Defense' : 'Magic Defense'}`;
+           const baseEffectDesc = leveledComboAbility.baseEffect?.desc;
+           const baseDice = leveledComboAbility.baseEffect?.dice ? leveledComboAbility.baseEffect?.dice : 0;
+           const baseFlat = leveledComboAbility.baseEffect?.flat ? leveledComboAbility.baseEffect?.flat : 0;
+           const directDice = leveledComboAbility.directHit?.dice ? leveledComboAbility.directHit?.dice : 0;
+           const directFlat = leveledComboAbility.directHit?.flat ? leveledComboAbility.directHit?.flat : 0;
+           const baseEffectDamage = baseDice ? `[[${baseDice}d6+${baseFlat}]]` : `[[${baseFlat}]]` ;
+           const directHitDamage =  (baseDice || directDice) ? `[[${baseDice+directDice}d6+${baseFlat+directFlat}]]` : `[[${baseFlat}]]`;
+           const critHitDamage =  (baseDice || directDice ) ? `[[${(baseDice+directDice)*2}d6+${baseFlat+directFlat}]]` : `[[${baseFlat+directFlat}]]`;
+           const directHitDesc= leveledComboAbility.directHit?.desc;
+           const limitation = leveledComboAbility.limitation;
+           const showLimitation = leveledComboAbility.limitation ? true : false;
+           const template = `&{template:primary-ability} {{currentLevel=${currentLevel}}} {{tags=${tags}}} {{target=${target}}} {{range=${range}}} {{attribute=${leveledAbility?.check}}} {{checkRoll=${checkRoll}}} {{cr=${cr}}} {{baseEffectDesc=${baseEffectDesc}}} {{baseEffectDamage=${baseEffectDamage}}} {{directHitDamage=${directHitDamage}}} {{critHitDamage=${critHitDamage}}} {{directHitDesc=${directHitDesc}}} ${showLimitation ? `{{limitation=${limitation}}}` : ''} {{name=${name}}}`;
+           startRoll(template, (results) => {
+             finishRoll(
+                 results.rollId
+             );
+           });
+        });
+    }
+    on("clicked:repeating_primary-abilities:combo-one", (event) => {
+    // Check the current value of the hidden attribute.
+        const rowid = event.sourceAttribute.split('_')[2];
+       fireComboAction(0,rowid)
+     });
+    on("clicked:repeating_primary-abilities:combo-two", (event) => {
+    // Check the current value of the hidden attribute.
+        const rowid = event.sourceAttribute.split('_')[2];
+       fireComboAction(1,rowid)
+     });
+    on('clicked:edit_race', () => {
+      toggle_attribute('edit_race');
+    });
+     on('clicked:edit_job', () => {
+      toggle_attribute('edit_job');
+    });
+    on('clicked:edit_attributes', () => {
+      toggle_attribute('edit_attributes');
+    });
+    on('clicked:edit_effects', () => {
+      toggle_attribute('edit_effects');
+    });
+
+     on('change:level change:job sheet:open', () => {
+       // remove existing abilites TODO: check for custom added ones
+       getSectionIDs("repeating_primary-abilities", (primaryAbilityIds) => {
+         for (var i = 0; i < primaryAbilityIds.length; i++) {
+           removeRepeatingRow("repeating_primary-abilities_" + primaryAbilityIds[i]);
+         }
+         getSectionIDs("repeating_secondary-abilities", (secondaryAbilityIds) => {
+           for (var i = 0; i < secondaryAbilityIds.length; i++) {
+             removeRepeatingRow("repeating_secondary-abilities_" + secondaryAbilityIds[i]);
+           }
+           getSectionIDs("repeating_instant-abilities", (instantAbilityIds) => {
+             for (var i = 0; i < instantAbilityIds.length; i++) {
+               removeRepeatingRow("repeating_instant-abilities_" + instantAbilityIds[i]);
+             }
+             getSectionIDs("repeating_effects", (effectIds) => {
+               for (var i = 0; i < effectIds.length; i++) {
+                 removeRepeatingRow("repeating_effects_" + effectIds[i]);
+               }
+               getAttrs([...attributes, 'level', 'job'], values => {
+                 const primaryAbilitiesToAdd = [];
+                 primaryAbilities.forEach(ability => {
+                   if (ability.job.includes(values.job) && (!("levels") in ability || has_level(ability?.levels, values['level'] ))) {
+                     primaryAbilitiesToAdd.push(ability);
+                   }
+                 });
+                 const secondaryAbilitiesToAdd = [];
+                 secondaryAbilities.forEach(ability => {
+                   if (ability.job.includes(values.job) && (!("levels") in ability || has_level(ability?.levels, values['level'] ))) {
+                     secondaryAbilitiesToAdd.push(ability);
+                   }
+                 });
+                 const instantAbilitiesToAdd = [];
+                 instantAbilities.forEach(ability => {
+                   if (ability.job.includes(values.job) && (!("levels") in ability || has_level(ability?.levels, values['level'] ))) {
+                     instantAbilitiesToAdd.push(ability);
+                   }
+                 });
+                 const effectsToAdd = [];
+                 effects.forEach(ability => {
+                   if (ability.job.includes(values.job) && (!("levels") in ability || has_level(ability?.levels, values['level'] ))) {
+                     effectsToAdd.push(ability);
+                   }
+                 });
+                 const newIds = [];
+                 let outputs = {};
+                  const limitBreak = limitBreaks.filter(x=>x.job.includes(values.job))[0];
+                 if(limitBreak){
+                    const leveledLimit = get_leveled_obj(values.level, limitBreak.levels);
+                   const limitOutputs = getAbilityOutputs(values.level, limitBreak, 'limit-', values);
+                   outputs = {...outputs,...limitOutputs}
+                 }
+                 primaryAbilitiesToAdd.forEach(ability => {
+                   const newId = generateRowID(newIds);
+                   const leveledAbility = get_leveled_obj(values.level, ability.levels);
+                   const newOutputs = getAbilityOutputs(values.level, ability, section_attribute('primary-abilities', newId, ''), values);
+                   outputs = {
+                     ...outputs,
+                     ...newOutputs
+                   };
+                   const comboOptions = getComboOptions(leveledAbility, values.level)
+                   if (comboOptions.length > 0) {
+                     for (i = 0; i < comboOptions.length; i++) {
+                       let comboOutputs = {};
+                       if (i == 0) {
+                         comboOutputs[`${section_attribute('primary-abilities',newId,'combo-one')}`] = 1;
+                         const newComboOutputs = getAbilityOutputs(values.level, comboOptions[i], `${section_attribute('primary-abilities',newId,'combo-one')}`, values);
+                         comboOutputs = {
+                           ...comboOutputs,
+                           ...newComboOutputs
+                         };
+                       } else if (i == 1) {
+                         comboOutputs[`${section_attribute('primary-abilities',newId,'combo-two')}`] = 1;
+                         const newComboOutputs = getAbilityOutputs(values.level, comboOptions[i], `${section_attribute('primary-abilities',newId,'combo-two')}`, values);
+                         comboOutputs = {
+                           ...comboOutputs,
+                           ...newComboOutputs
+                         };
+                       }
+                       outputs = {
+                         ...outputs,
+                         ...comboOutputs
+                       }
+                     }
+                   }
+                 })
+                 secondaryAbilitiesToAdd.forEach(ability => {
+                   const newId = generateRowID(newIds);
+                   const leveledAbility = get_leveled_obj(values.level, ability.levels);
+                   const newOutputs = getAbilityOutputs(values.level, ability, section_attribute('secondary-abilities', newId, ''), values);
+                   outputs = {
+                     ...outputs,
+                     ...newOutputs
+                   };
+                 });
+                 instantAbilitiesToAdd.forEach(ability => {
+                   const newId = generateRowID(newIds);
+                   const leveledAbility = get_leveled_obj(values.level, ability.levels);
+                   const newOutputs = getAbilityOutputs(values.level, ability, section_attribute('instant-abilities', newId, ''), values);
+                   outputs = {
+                     ...outputs,
+                     ...newOutputs
+                   };
+                 });
+                 effectsToAdd.forEach(ability => {
+                   const newId = generateRowID(newIds);
+                   const leveledAbility = get_leveled_obj(values.level, ability.levels);
+                   const newOutputs = getAbilityOutputs(values.level, ability, section_attribute('effects', newId, ''), values);
+                   outputs = {
+                     ...outputs,
+                     ...newOutputs
+                   };
+                 });
+                 setAttrs(outputs);
+               });
+             });
+           });
+         });
+       });
+     });
+    on('change:repeating_effects remove:repeating_effects change:edit_effects change:level', () => {
+      getSectionIDs('repeating_effects', (ids) => {
+          const currentEffects = [];
+          ids.forEach( (id) => {
+            const effectToUpdate = section_attribute('effects', id, 'effect');
+            currentEffects.push(effectToUpdate)
+          });
+          getAttrs([...currentEffects, 'edit_effects', 'level'], values => {
+              const currentLevel = values.level;
+              const lvlobj = levels.filter(x=>x.value === currentLevel)[0];
+              const outputs = {};
+              ids.forEach( id => {
+                const effectObj = effects.filter(x=>x.value === values[`${section_attribute('effects', id, 'effect')}`])[0]
+                if(effectObj){
+                  const leveledEffect = get_leveled_obj(values.level, effectObj.levels);
+                  outputs[`${section_attribute('effects', id, 'description')}`] = leveledEffect.description;
+                  outputs[`${section_attribute('effects', id, 'edit')}`] = values.edit_effects;
+                  outputs[`${section_attribute('effects', id, 'name')}`] = effectObj.name;
+                  if(effectObj.tags){
+                    outputs[`${section_attribute('effects', id, 'tags')}`] = effectObj.tags.join(', ');
+                  }
+                }
+              });
+              setAttrs(outputs);
+            });
+        });
+      });
+      getAttrs(['edit_effects', 'level', 'job'], function(parentValues) {
+        const currentLevel = parentValues.level;
+        const currentJob = parentValues.job;
+
+    });
+    on('change:currenthp', () => {
+      getAttrs(['currenthp', 'maxhp'], function(values) {
+        if(values.currenthp > values.maxhp){
+          setAttrs({
+            currenthp: values.maxhp
+          });
+        }
+     });
+    });
+    on('change:currentmp', () => {
+    getAttrs(['currentmp', 'maxmp'], function(values) {
+      if(values.currentmp > values.maxmp){
+        setAttrs({
+          currentmp: values.maxmp
+        });
+      }
+    });
+    });
+
+    on('change:edit_effects', () => {
+    getAttrs(['edit_effects'], function(values) {
+      getSectionIDs('repeating_effects', function(ids) {
+        ids.forEach(function(id) {
+          const outputs = { };
+            outputs[`${section_attribute('traits', id, 'edit')}`] =values.edit_effects;
+            setAttrs(outputs);
+        });
+      });
+    });
+    });
+</script>
