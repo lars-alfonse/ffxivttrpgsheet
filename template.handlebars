@@ -1,0 +1,1560 @@
+<div class="backdrop">
+    <div class="char-section boxed">
+        <div class="flex">
+            <div class="">
+                <img class="token" name="attr_character_token" />
+            </div>
+            <div class="flex col name-section">
+                <div>Name / Race</div>
+                <div class="flex row name-section-inputs">
+                    <div class="name-section-input">
+                        <span name="attr_character_name"></span>
+                    </div>
+                    <div>
+                        {{!-- <input type="hidden" name="attr_edit_race" class="race-checkbox" value="0" /> --}}
+                        <select class="race-select" name="attr_race">
+                            {{#each races}}
+                            <option value="{{this.value}}">{{this.name}}</option>
+                            {{/each}}
+                        </select>
+                        {{!-- <input type="hidden" name="attr_edit_race" class="race-checkbox" value="0" />
+                        <div class="race-display">
+                            <span name="attr_race"></span>
+                        </div>
+                        --}} {{!--
+                        <div>
+                            <input type="hidden" name="attr_edit_race" class="race-checkbox" value="0" />
+                            <div class="race-edit-button">
+                                <button type="action" name="act_edit_race">Edit</button>
+                            </div>
+                            <input type="hidden" name="attr_edit_race" class="race-checkbox" value="0" />
+                            <div class="race-done-button">
+                                <button type="action" name="act_edit_race">Done</button>
+                            </div>
+                        </div>
+                        --}}
+                    </div>
+                </div>
+                <div class="flex">
+                    <div>
+                        <span>Job:</span>
+                        {{!-- <input type="hidden" name="attr_edit_job" class="job-checkbox" value="0" /> --}}
+                        <select class="level-select" name="attr_level">
+                            {{#each levels}}
+                            <option value="{{this.value}}">{{this.name}}</option>
+                            {{/each}}
+                        </select>
+                        {{!-- <input type="hidden" name="attr_edit_job" class="job-checkbox" value="0" />
+                        <div class="level-display">
+                            <span name="attr_level"></span>
+                        </div>
+                        --}}
+                    </div>
+                    <div>
+                        {{!-- <input type="hidden" name="attr_edit_job" class="job-checkbox" value="0" /> --}}
+                        <select class="job-select" name="attr_job">
+                            {{#each jobs}}
+                            <option value="{{this.value}}">{{this.name}}</option>
+                            {{/each}}
+                        </select>
+                        {{!-- <input type="hidden" name="attr_edit_job" class="job-checkbox" value="0" />
+                        <div class="job-display">
+                            <span name="attr_job"></span>
+                        </div>
+                        --}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{!--
+        <div>
+            <input type="hidden" name="attr_edit_job" class="job-checkbox" value="0" />
+            <div class="job-edit-button">
+                <button type="action" name="act_edit_job">Edit</button>
+            </div>
+            <input type="hidden" name="attr_edit_job" class="job-checkbox" value="0" />
+            <div class="job-done-button">
+                <button type="action" name="act_edit_job">Done</button>
+            </div>
+        </div>
+        --}}
+    </div>
+    <div class="attribute-section">
+        <div>
+            <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+            <div class="attr-edit-button">
+                <button type="action" name="act_edit_attributes">Edit</button>
+            </div>
+            <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+            <div class="attr-done-button">
+                <button type="action" name="act_edit_attributes">Done</button>
+            </div>
+        </div>
+        <div class="flex row attr-section hide-overflow">
+            <div class="flex col attr-col">
+                <span>Primary Attributes</span>
+                <!-- STR Attribute -->
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-edit">
+                    <span>STR</span>
+                    <input class="attribute-input" type="number" name="attr_str" value="5" />
+                </div>
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-display">
+                    <button class="attr-button" type="action" name="act_str">
+                        <span class="attribute-button-text">STR</span>
+                        <span class="attribute-button-text" name="attr_str"></span>
+                    </button>
+                </div>
+                <!-- DEX Attribute -->
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-edit">
+                    <span>DEX</span>
+                    <input class="attribute-input" type="number" name="attr_dex" value="4" />
+                </div>
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-display">
+                    <button class="attr-button" type="action" name="act_dex">
+                        <span class="attribute-button-text">DEX</span>
+                        <span class="attribute-button-text" name="attr_dex"></span>
+                    </button>
+                </div>
+                <!-- VIT Attribute -->
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-edit">
+                    <span>VIT</span>
+                    <input class="attribute-input" type="number" name="attr_vit" value="2" />
+                </div>
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-display">
+                    <button class="attr-button" type="action" name="act_vit">
+                        <span class="attribute-button-text">VIT</span>
+                        <span class="attribute-button-text" name="attr_vit"></span>
+                    </button>
+                </div>
+                <!-- INT Attribute -->
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-edit">
+                    <span>INT</span>
+                    <input class="attribute-input" type="number" name="attr_int" value="1" />
+                </div>
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-display">
+                    <button class="attr-button" type="action" name="act_int">
+                        <span class="attribute-button-text">INT</span>
+                        <span class="attribute-button-text" name="attr_int"></span>
+                    </button>
+                </div>
+                <!-- MND Attribute -->
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-edit">
+                    <span>MND</span>
+                    <input class="attribute-input" type="number" name="attr_mnd" value="1" />
+                </div>
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-display">
+                    <button class="attr-button" type="action" name="act_mnd">
+                        <span class="attribute-button-text">MND</span>
+                        <span class="attribute-button-text" name="attr_mnd"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="flex col attr-col attr-col-second">
+                <span>Secondary Attributes</span>
+                <!-- Defense Attribute -->
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-edit">
+                    <span>Defense</span>
+                    <input class="attribute-input" type="number" name="attr_def" value="1" />
+                </div>
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-display">
+                    <button class="attr-button" type="action" name="act_def">
+                        <span class="attribute-button-text-secondary">Defense</span>
+                        <span class="attribute-button-text-secondary" name="attr_def"></span>
+                    </button>
+                </div>
+                <!-- Magic Defense Attribute -->
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-edit">
+                    <span>Magic Defense</span>
+                    <input class="attribute-input" type="number" name="attr_magdef" value="11" />
+                </div>
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-display">
+                    <button class="attr-button" type="action" name="act_magdef">
+                        <span class="attribute-button-text-secondary">Magic Defense</span>
+                        <span class="attribute-button-text-secondary" name="attr_magdef"></span>
+                    </button>
+                </div>
+                <!-- Vigilance Attribute -->
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-edit">
+                    <span>Vigilance</span>
+                    <input class="attribute-input" type="number" name="attr_vig" value="11" />
+                </div>
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-display">
+                    <button class="attr-button" type="action" name="act_vig">
+                        <span class="attribute-button-text-secondary">Vigilance</span>
+                        <span class="attribute-button-text-secondary" name="attr_vig"></span>
+                    </button>
+                </div>
+                <!-- Speed Attribute -->
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-edit">
+                    <span>Speed</span>
+                    <input class="attribute-input" type="number" name="attr_speed" value="5" />
+                </div>
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="attr-line-display">
+                    <button class="attr-button" type="action" name="act_speed">
+                        <div class="speed-button-wrapper">
+                            <span class="attribute-button-text-secondary">Speed</span>
+                            <span class="attribute-button-text-secondary" name="attr_speed"></span>
+                            <span class="attribute-button-text-secondary">Squares</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="flex row hide-overflow">
+                <img height="300px" width="200px" name="attr_character_avatar" />
+            </div>
+        </div>
+        <div class="flex resource-wrapper">
+            <div class="resource-box flex">
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="resource-display">
+                    <button type="action" class="mp-button resource-button" name="act_maxmp">
+                        <span class="resource-button-text">MP</span>
+                        <span class="resource-button-text">max</span>
+                        <span class="resource-button-text" name="attr_maxmp"></span>
+                    </button>
+                </div>
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="resource-edit">
+                    <button class="mp-button resource-button cursor-default">
+                        <span class="resource-button-text">MP</span>
+                        <span class="resource-button-text">max</span>
+                        <input class="attribute-input mp-max-input resource-max-input" type="number" name="attr_maxmp" value="5" />
+                    </button>
+                </div>
+                <div class="flex col center">
+                    <div>
+                        <span class="mp-desc">Recover 2 MP at the end of the [Adventurer Step]</span>
+                    </div>
+                    <input class="attribute-input" type="number" name="attr_currentmp" value="5" />
+                </div>
+            </div>
+            <div class="resource-box flex">
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="resource-display">
+                    <button type="action" class="hp-button resource-button" name="act_maxhp">
+                        <span class="resource-button-text">HP</span>
+                        <span class="resource-button-text">max</span>
+                        <span class="resource-button-text" name="attr_maxhp"></span>
+                    </button>
+                </div>
+                <input type="hidden" name="attr_edit_attributes" class="attribute-checkbox" value="0" />
+                <div class="resource-edit">
+                    <button class="hp-button resource-button cursor-default">
+                        <span class="resource-button-text">HP</span>
+                        <span class="resource-button-text">max</span>
+                        <input class="attribute-input hp-max-input resource-max-input" type="number" name="attr_maxhp" value="36" />
+                    </button>
+                </div>
+                <div class="hp-current center just-center flex">
+                    <input class="attribute-input" type="number" name="attr_currenthp" value="27" />
+                </div>
+                <div class="hp-barrier center just-center flex">
+                    <input class="attribute-input" type="number" name="attr_currentbarrier" value="0" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex col effects-section">
+        <div class="traits-header">
+            <div class="traits-header-label">
+                Traits & Other Effects
+            </div>
+            {{!--
+            <div>
+                <input type="hidden" name="attr_edit_effects" class="effects-checkbox" value="0" />
+                <div class="effect-display">
+                    <button type="action" name="act_edit_effects">Edit</button>
+                </div>
+                <input type="hidden" name="attr_edit_effects" class="effects-checkbox" value="0" />
+                <div class="effect-edit">
+                    <button type="action" name="act_edit_effects">Done</button>
+                </div>
+            </div>
+            --}}
+        </div>
+        <div></div>
+        <div>
+            {{!-- <input type="hidden" name="attr_edit_effects" class="effects-checkbox" value="1" />
+            <div class="effect-edit">
+                <fieldset class="repeating_effects effect-edit">
+                    <select class="trait-select" name="attr_value">
+                        {{#each effects}}
+                        <option value="{{this.value}}">{{this.name}}</option>
+                        {{/each}}
+                    </select>
+                    <span class="trait-description" name="attr_base-effect"></span>
+                </fieldset>
+            </div>
+            <input type="hidden" name="attr_edit_effects" class="effects-checkbox" value="1" /> --}}
+            <div class="display effect-display">
+                <fieldset class="repeating_effects">
+                    <button class="primary-action-button" type="action" name="act_roll">
+                        <div class="ability-title">
+                            <span class="ability-name" name="attr_name"></span>
+                            <span class="ability-tags" name="attr_tags"></span>
+                        </div>
+                        <div class="ability-check-section">
+                            <input type="hidden" name="attr_show-cost" class="show-cost-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Cost:</span>
+                                <span name="attr_cost"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-trigger" class="show-trigger-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Trigger:</span>
+                                <span name="attr_trigger"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-target" class="show-target-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Target:</span>
+                                <span name="attr_target"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-range" class="show-range-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Range:</span>
+                                <span name="attr_range"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-check" class="show-check-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Check:</span>
+                                <span name="attr_check"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-cr" class="show-cr-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>CR:</span>
+                                <span name="attr_cr"></span>
+                            </div>
+                        </div>
+                        <div class="abilities-effect-section">
+                            <div class="ability-row">
+                                <input type="hidden" name="attr_show-base-effect" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Base Effect:</span>
+                                    <span name="attr_base-effect"></span>
+                                </div>
+                            </div>
+                            <div class="ability-row">
+                                <input type="hidden" name="attr_show-direct-hit" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Direct Hit:</span>
+                                    <span name="attr_direct-hit"></span>
+                                </div>
+                            </div>
+                            <div class="ability-row-full">
+                                <input type="hidden" name="attr_show-limitation" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Limitation:</span>
+                                    <span name="attr_limitation"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                    {{!--
+                    <button type="action" name="act_roll" class="effect-button">
+                        <div class="effect-header">
+                            <span class="effect-display-label" name="attr_name"></span>
+                            <span class="effect-display-tags" name="attr_tags"></span>
+                        </div>
+                        <div>
+                            <span class="effect-description" name="attr_base-effect"></span>
+                        </div>
+                    </button>
+                    --}}
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <div class="abilities-section">
+        <div class="limit-break-section">
+            <button class="primary-action-button" type="action" name="act_limitroll">
+                <div class="ability-title">
+                    <span class="ability-name" name="attr_limit-name"></span>
+                    <span class="ability-tags" name="attr_limit-tags"></span>
+                </div>
+                <div class="ability-check-section">
+                    <input type="hidden" name="attr_limit-show-cost" class="show-cost-checkbox" value="1" />
+                    <div class="ability-display-section">
+                        <span>Cost:</span>
+                        <span name="attr_limit-cost"></span>
+                    </div>
+                    <input type="hidden" name="attr_limit-show-trigger" class="show-trigger-checkbox" value="1" />
+                    <div class="ability-display-section">
+                        <span>Trigger:</span>
+                        <span name="attr_limit-trigger"></span>
+                    </div>
+                    <input type="hidden" name="attr_limit-show-target" class="show-target-checkbox" value="1" />
+                    <div class="ability-display-section">
+                        <span>Target:</span>
+                        <span name="attr_limit-target"></span>
+                    </div>
+                    <input type="hidden" name="attr_limit-show-range" class="show-range-checkbox" value="1" />
+                    <div class="ability-display-section">
+                        <span>Range:</span>
+                        <span name="attr_limit-range"></span>
+                    </div>
+                    <input type="hidden" name="attr_limit-show-check" class="show-check-checkbox" value="1" />
+                    <div class="ability-display-section">
+                        <span>Check:</span>
+                        <span name="attr_limit-check"></span>
+                    </div>
+                    <input type="hidden" name="attr_limit-show-cr" class="show-cr-checkbox" value="1" />
+                    <div class="ability-display-section">
+                        <span>CR:</span>
+                        <span name="attr_limit-cr"></span>
+                    </div>
+                </div>
+                <div class="abilities-effect-section">
+                    <div class="ability-row">
+                        <input type="hidden" name="attr_limit-show-base-effect" class="show-checkbox" value="1" />
+                        <div class="ability-row-full">
+                            <span>Base Effect:</span>
+                            <span name="attr_limit-base-effect"></span>
+                        </div>
+                    </div>
+                    <div class="ability-row">
+                        <input type="hidden" name="attr_limit-show-direct-hit" class="show-checkbox" value="1" />
+                        <div class="ability-row-full">
+                            <span>Direct Hit:</span>
+                            <span name="attr_limit-direct-hit"></span>
+                        </div>
+                    </div>
+                    <div class="ability-row-full">
+                        <input type="hidden" name="attr_limit-show-limitation" class="show-checkbox" value="1" />
+                        <div class="ability-row-full">
+                            <span>Limitation:</span>
+                            <span name="attr_limit-limitation"></span>
+                        </div>
+                    </div>
+                </div>
+            </button>
+        </div>
+        <div class="primary-abilities-wrapper">
+            <div class="primary-abilities-header abilities-header">
+                <span>Primary Abilities</span>
+            </div>
+            <fieldset class="repeating_primary-abilities">
+                <div class="primary-buttons-wrapper">
+                    <button class="primary-action-button" type="action" name="act_roll">
+                        <div class="ability-title">
+                            <span class="ability-name" name="attr_name"></span>
+                            <span class="ability-tags" name="attr_tags"></span>
+                        </div>
+                        <div class="ability-check-section">
+                            <input type="hidden" name="attr_show-cost" class="show-cost-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Cost:</span>
+                                <span name="attr_cost"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-trigger" class="show-trigger-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Trigger:</span>
+                                <span name="attr_trigger"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-target" class="show-target-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Target:</span>
+                                <span name="attr_target"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-range" class="show-range-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Range:</span>
+                                <span name="attr_range"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-check" class="show-check-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Check:</span>
+                                <span name="attr_check"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-cr" class="show-cr-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>CR:</span>
+                                <span name="attr_cr"></span>
+                            </div>
+                        </div>
+                        <div class="abilities-effect-section">
+                            <div class="ability-row">
+                                <input type="hidden" name="attr_show-base-effect" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Base Effect:</span>
+                                    <span name="attr_base-effect"></span>
+                                </div>
+                            </div>
+                            <div class="ability-row">
+                                <input type="hidden" name="attr_show-direct-hit" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Direct Hit:</span>
+                                    <span name="attr_direct-hit"></span>
+                                </div>
+                            </div>
+                            <div class="ability-row-full">
+                                <input type="hidden" name="attr_show-limitation" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Limitation:</span>
+                                    <span name="attr_limitation"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                    <input type="hidden" name="attr_combo-one" class="combo-onecheckbox" value="0" />
+                    <div class="combos-wrapper">
+                        <button class="primary-action-button combo-button" type="action" name="act_combo-one">
+                            <div class="ability-title">
+                                <span class="ability-name" name="attr_combo-onename"></span>
+                                <span class="ability-tags" name="attr_combo-onetags"></span>
+                            </div>
+                            <div class="ability-check-section">
+                                <input type="hidden" name="attr_combo-oneshow-cost" class="show-cost-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>Cost:</span>
+                                    <span name="attr_combo-onecost"></span>
+                                </div>
+                                <input type="hidden" name="attr_combo-oneshow-trigger" class="show-trigger-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>Trigger:</span>
+                                    <span name="attr_combo-onetrigger"></span>
+                                </div>
+                                <input type="hidden" name="attr_combo-oneshow-target" class="show-target-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>Target:</span>
+                                    <span name="attr_combo-onetarget"></span>
+                                </div>
+                                <input type="hidden" name="attr_combo-oneshow-range" class="show-range-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>Range:</span>
+                                    <span name="attr_combo-onerange"></span>
+                                </div>
+                                <input type="hidden" name="attr_combo-oneshow-check" class="show-check-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>Check:</span>
+                                    <span name="attr_combo-onecheck"></span>
+                                </div>
+                                <input type="hidden" name="attr_combo-oneshow-cr" class="show-cr-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>CR:</span>
+                                    <span name="attr_combo-onecr"></span>
+                                </div>
+                            </div>
+                            <div class="abilities-effect-section">
+                                <div class="ability-row">
+                                    <input type="hidden" name="attr_combo-oneshow-base-effect" class="show-checkbox" value="1" />
+                                    <div class="ability-row-full">
+                                        <span>Base Effect:</span>
+                                        <span name="attr_combo-onebase-effect"></span>
+                                    </div>
+                                </div>
+                                <div class="ability-row">
+                                    <input type="hidden" name="attr_combo-oneshow-direct-hit" class="show-checkbox" value="1" />
+                                    <div class="ability-row-full">
+                                        <span>Direct Hit:</span>
+                                        <span name="attr_combo-onedirect-hit"></span>
+                                    </div>
+                                </div>
+                                <div class="ability-row-full">
+                                    <input type="hidden" name="attr_combo-oneshow-limitation" class="show-checkbox" value="1" />
+                                    <div class="ability-row-full">
+                                        <span>Limitation:</span>
+                                        <span name="attr_combo-onelimitation"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <input type="hidden" name="attr_combo-two" class="combo-twocheckbox" value="0" />
+                        <button class="primary-action-button combo-button" type="action" name="act_combo-two">
+                            <div class="ability-title">
+                                <span class="ability-name" name="attr_combo-twoname"></span>
+                                <span class="ability-tags" name="attr_combo-twotags"></span>
+                            </div>
+                            <div class="ability-check-section">
+                                <input type="hidden" name="attr_combo-twoshow-cost" class="show-cost-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>Cost:</span>
+                                    <span name="attr_combo-twocost"></span>
+                                </div>
+                                <input type="hidden" name="attr_combo-twoshow-trigger" class="show-trigger-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>Trigger:</span>
+                                    <span name="attr_combo-twotrigger"></span>
+                                </div>
+                                <input type="hidden" name="attr_combo-twoshow-target" class="show-target-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>Target:</span>
+                                    <span name="attr_combo-twotarget"></span>
+                                </div>
+                                <input type="hidden" name="attr_combo-twoshow-range" class="show-range-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>Range:</span>
+                                    <span name="attr_combo-tworange"></span>
+                                </div>
+                                <input type="hidden" name="attr_combo-twoshow-check" class="show-check-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>Check:</span>
+                                    <span name="attr_combo-twocheck"></span>
+                                </div>
+                                <input type="hidden" name="attr_combo-twoshow-cr" class="show-cr-checkbox" value="1" />
+                                <div class="ability-display-section">
+                                    <span>CR:</span>
+                                    <span name="attr_combo-twocr"></span>
+                                </div>
+                            </div>
+                            <div class="abilities-effect-section">
+                                <div class="ability-row">
+                                    <input type="hidden" name="attr_combo-twoshow-base-effect" class="show-checkbox" value="1" />
+                                    <div class="ability-row-full">
+                                        <span>Base Effect:</span>
+                                        <span name="attr_combo-twobase-effect"></span>
+                                    </div>
+                                </div>
+                                <div class="ability-row">
+                                    <input type="hidden" name="attr_combo-twoshow-direct-hit" class="show-checkbox" value="1" />
+                                    <div class="ability-row-full">
+                                        <span>Direct Hit:</span>
+                                        <span name="attr_combo-twodirect-hit"></span>
+                                    </div>
+                                </div>
+                                <div class="ability-row-full">
+                                    <input type="hidden" name="attr_combo-twoshow-limitation" class="show-checkbox" value="1" />
+                                    <div class="ability-row-full">
+                                        <span>Limitation:</span>
+                                        <span name="attr_combo-twolimitation"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="secondary-abilities-wrapper">
+            <div class="secondary-abilities-header abilities-header">
+                <span>Secondary Abilities</span>
+            </div>
+            <fieldset class="repeating_secondary-abilities">
+                <div class="secondary-buttons-wrapper">
+                    <button class="primary-action-button" type="action" name="act_roll">
+                        <div class="ability-title">
+                            <span class="ability-name" name="attr_name"></span>
+                            <span class="ability-tags" name="attr_tags"></span>
+                        </div>
+                        <div class="ability-check-section">
+                            <input type="hidden" name="attr_show-cost" class="show-cost-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Cost:</span>
+                                <span name="attr_cost"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-trigger" class="show-trigger-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Trigger:</span>
+                                <span name="attr_trigger"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-target" class="show-target-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Target:</span>
+                                <span name="attr_target"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-range" class="show-range-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Range:</span>
+                                <span name="attr_range"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-check" class="show-check-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Check:</span>
+                                <span name="attr_check"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-cr" class="show-cr-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>CR:</span>
+                                <span name="attr_cr"></span>
+                            </div>
+                        </div>
+                        <div class="abilities-effect-section">
+                            <div class="ability-row">
+                                <input type="hidden" name="attr_show-base-effect" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Base Effect:</span>
+                                    <span name="attr_base-effect"></span>
+                                </div>
+                            </div>
+                            <div class="ability-row">
+                                <input type="hidden" name="attr_show-direct-hit" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Direct Hit:</span>
+                                    <span name="attr_direct-hit"></span>
+                                </div>
+                            </div>
+                            <div class="ability-row-full">
+                                <input type="hidden" name="attr_show-limitation" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Limitation:</span>
+                                    <span name="attr_limitation"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </fieldset>
+        </div>
+        <div class="instant-abilites-wrapper">
+            <div class="instant-abilities-header abilities-header">
+                <span>Instant Abilities</span>
+            </div>
+            <fieldset class="repeating_instant-abilities">
+                <div class="instant-buttons-wrapper">
+                    <button class="primary-action-button" type="action" name="act_roll">
+                        <div class="ability-title">
+                            <span class="ability-name" name="attr_name"></span>
+                            <span class="ability-tags" name="attr_tags"></span>
+                        </div>
+                        <div class="ability-check-section">
+                            <input type="hidden" name="attr_show-cost" class="show-cost-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Cost:</span>
+                                <span name="attr_cost"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-trigger" class="show-trigger-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Trigger:</span>
+                                <span name="attr_trigger"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-target" class="show-target-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Target:</span>
+                                <span name="attr_target"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-range" class="show-range-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Range:</span>
+                                <span name="attr_range"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-check" class="show-check-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>Check:</span>
+                                <span name="attr_check"></span>
+                            </div>
+                            <input type="hidden" name="attr_show-cr" class="show-cr-checkbox" value="1" />
+                            <div class="ability-display-section">
+                                <span>CR:</span>
+                                <span name="attr_cr"></span>
+                            </div>
+                        </div>
+                        <div class="abilities-effect-section">
+                            <div class="ability-row">
+                                <input type="hidden" name="attr_show-base-effect" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Base Effect:</span>
+                                    <span name="attr_base-effect"></span>
+                                </div>
+                            </div>
+                            <div class="ability-row">
+                                <input type="hidden" name="attr_show-direct-hit" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Direct Hit:</span>
+                                    <span name="attr_direct-hit"></span>
+                                </div>
+                            </div>
+                            <div class="ability-row-full">
+                                <input type="hidden" name="attr_show-limitation" class="show-checkbox" value="1" />
+                                <div class="ability-row-full">
+                                    <span>Limitation:</span>
+                                    <span name="attr_limitation"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </fieldset>
+        </div>
+        <div></div>
+    </div>
+</div>
+{{{{noop}}}}
+<rolltemplate class="sheet-rolltemplate-effect">
+    <div class="sheet-template-title">
+        {{title}}
+    </div>
+    {{#desc}}
+    <div class="sheet-template-row">
+        <span class="sheet-template-desc">
+            {{desc}}
+        </span>
+    </div>
+    {{/desc}}
+</rolltemplate>
+<rolltemplate class="sheet-rolltemplate-primary-ability">
+    <div class="sheet-template-title">
+        <span class="sheet-template-name">{{name}}</span>
+        <span class="sheet-template-tags">{{tags}}</span>
+    </div>
+    <div class="sheet-template-check-section">
+        {{#cost}}
+        <div class="sheet-template-display-section">
+            <span>Cost:</span>
+            <span>{{cost}}</span>
+        </div>
+        {{/cost}} {{#trigger}}
+        <div class="sheet-template-display-section">
+            <span>Trigger:</span>
+            <span>{{trigger}}</span>
+        </div>
+        {{/trigger}} {{#target}}
+        <div class="sheet-template-display-section">
+            <span>Target:</span>
+            <span>{{target}}</span>
+        </div>
+        {{/target}} {{#range}}
+        <div class="sheet-template-display-section">
+            <span>Range:</span>
+            <span>{{range}}</span>
+        </div>
+        {{/range}} {{#check}}
+        <div class="sheet-template-display-section">
+            <span>Check:</span>
+            <span>{{check}}</span>
+        </div>
+        {{/check}} {{#cr}}
+        <div class="sheet-template-display-section">
+            <span>CR:</span>
+            <span>{{cr}}</span>
+        </div>
+        {{/cr}}
+    </div>
+    <div class="sheet-template-effect-section">
+        {{#baseEffectDesc}}
+        <div class="sheet-template-row">
+            <div class="sheet-grid-full">
+                <span class="sheet-template-label">Base Effect:</span>
+                <span class="sheet-template-text">{{baseEffectDesc}}</span>
+            </div>
+        </div>
+        {{/baseEffectDesc}} {{#baseEffectDamage}}
+        <div class="sheet-template-row">
+            <div class="sheet-grid-full">
+                <span class="sheet-template-label">Damage:</span>
+                <span>{{baseEffectDamage}}</span>
+            </div>
+        </div>
+        {{/baseEffectDamage}} {{#directHitDesc}}
+        <div class="sheet-template-row">
+            <div class="sheet-grid-full">
+                <span class="sheet-template-label">Direct Hit:</span>
+                <span class="sheet-template-text">{{directHitDesc}}</span>
+            </div>
+        </div>
+        {{/directHitDesc}} {{#checkRoll}}
+        <div class="sheet-template-row">
+            <div class="sheet-grid-full">
+                <span class="sheet-template-label">Damage:</span>
+                {{#rollWasCrit() checkRoll}}
+                <span class="sheet-template-text">Crit:&nbsp;{{critHitDamage}}</span>
+                {{/rollWasCrit() checkRoll}} {{#^rollWasCrit() checkRoll}}
+                <span>{{directHitDamage}}</span>
+                {{/^rollWasCrit() checkRoll}}
+            </div>
+        </div>
+        {{/checkRoll}} {{#limitation}}
+        <div class="sheet-template-row">
+            <div class="sheet-grid-full">
+                <span class="sheet-template-label">Limitation:</span>
+                <span class="sheet-template-text">{{limitation}}</span>
+            </div>
+        </div>
+        {{/limitation}} {{#comboOptionOneName}}
+        <div>
+            Combo Actions: [{{comboOptionOneName}}]({{comboOneAct}}) {{#comboOptionTwoName}} [{{comboOptionTwoName}}]({{comboTwoAct}}) {{/comboOptionTwoName}}
+        </div>
+        {{/comboOptionOneName}}
+    </div>
+</rolltemplate>
+{{{{/noop}}}}
+<script type="text/worker">
+    const effects = {{{JSONstringify effects}}}
+    const primaryAbilities = {{{JSONstringify primaryAbilities}}};
+    const secondaryAbilities = {{{JSONstringify secondaryAbilities}}};
+    const instantAbilities = {{{JSONstringify instantAbilities}}};
+    const limitBreaks = {{{JSONstringify limitBreaks}}};
+    const jobs = {{{JSONstringify jobs}}};
+    const levels = {{{JSONstringify levels}}};
+    const races = {{{JSONstringify races}}};
+
+
+    const section_attribute = (section, id, field) => `repeating_${section}_${id}_${field}`;
+    const toggle_attribute = (attr) => {
+      getAttrs([attr], (values) => {
+        let newVal = values[attr] == 0 ? 1 : 0;
+        const output = {};
+        output[attr] = newVal
+        setAttrs(output);
+      });
+    };
+
+    const get_leveled_obj = (currentLevel, levelObject) => {
+      // gets the highest level version for inputed level
+      let stringLevel = `${currentLevel}`;
+      switch(stringLevel){
+        case "30":
+          return levelObject[stringLevel] ?? {};
+        case "40":
+          return levelObject[stringLevel] ?? levelObject["30"] ?? {};
+        case "50":
+          return levelObject[stringLevel] ?? levelObject["40"] ?? levelObject["30"] ?? {};
+        default:
+          return {};
+      }
+    };
+    const has_level = (levels, level) => {
+      let stringLevel = `${level}`
+      switch(stringLevel){
+        case "30":
+          return stringLevel in levels;
+        case "40":
+          return stringLevel in levels || "30" in levels;
+        case "50":
+          return stringLevel in levels || "40" in levels || "30" in levels;
+        default:
+          return false;
+      }
+    }
+
+    const getComboOptions = (leveledAbility, level) => {
+     const comboOptions = [];
+     if(!leveledAbility?.combo) return comboOptions
+     Object.keys(leveledAbility?.combo).forEach(key=>{
+         if(get_leveled_obj(level, leveledAbility?.combo[key])){
+           leveledAbility.combo[key].value = key;
+           comboOptions.push(leveledAbility.combo[key]);
+         }
+     })
+     return comboOptions;
+    }
+
+    const getAbilityOutputs = (level, ability, attrprefix, values) => {
+     const outputs = {};
+     const leveledAbility = get_leveled_obj(level, ability.levels);
+     outputs[`${attrprefix}name`] = leveledAbility?.upgradeName ? leveledAbility?.upgradeName : (ability.name ? ability.name : '');
+     outputs[`${attrprefix}show-name`] = ability.name ? 1 : 0;
+     outputs[`${attrprefix}value`] = ability.value ? ability.value : '';
+     outputs[`${attrprefix}show-trigger`] = leveledAbility?.trigger ? 1 : 0;
+     outputs[`${attrprefix}cost`] = leveledAbility?.cost ? leveledAbility?.cost : '';
+     outputs[`${attrprefix}show-cost`] = leveledAbility?.cost ? 1 : 0;
+     outputs[`${attrprefix}trigger`] = leveledAbility?.trigger ? leveledAbility?.trigger : '';
+     outputs[`${attrprefix}tags`] = ability.tags ? ability.tags?.join(', ') : '';
+     outputs[`${attrprefix}target`] = leveledAbility?.target ? leveledAbility?.target : '';
+     outputs[`${attrprefix}show-target`] = leveledAbility?.target ? 1 : 0;
+     outputs[`${attrprefix}range`] = leveledAbility?.range ? leveledAbility?.range : '';
+     outputs[`${attrprefix}show-range`] = leveledAbility?.range ? 1 : 0;
+     outputs[`${attrprefix}check`] = leveledAbility?.check ? `${leveledAbility?.check} ${leveledAbility?.check === "Special"? '(d20)' :`(d20${'+'+values[leveledAbility?.check?.toLowerCase()]})`}` : '';
+     outputs[`${attrprefix}show-check`] = leveledAbility?.check ? 1 : 0;
+     outputs[`${attrprefix}cr`] =  leveledAbility?.cr  ? `Target's ${leveledAbility?.cr == 'Defense' ? 'Defense' : 'Magic Defense'}` : '';
+     outputs[`${attrprefix}show-cr`] =  leveledAbility?.cr  ? 1 : 0;
+     outputs[`${attrprefix}base-effect`] = leveledAbility?.baseEffect?.desc ? leveledAbility?.baseEffect?.desc : '';
+     outputs[`${attrprefix}base-effect-damage`] = leveledAbility?.baseEffect?.damage ? leveledAbility?.baseEffect?.damage : '';
+     outputs[`${attrprefix}direct-hit-damage`] = leveledAbility?.directHit?.damage ? leveledAbility?.directHit?.damage : '';
+     outputs[`${attrprefix}direct-hit`] = leveledAbility?.directHit?.desc ? leveledAbility?.directHit?.desc : '';
+     outputs[`${attrprefix}show-direct-hit`] = leveledAbility?.directHit?.desc ? 1 : 0;
+     outputs[`${attrprefix}limitation`] = leveledAbility?.limitation ? leveledAbility?.limitation : '';
+     outputs[`${attrprefix}show-limitation`] = leveledAbility?.limitation ? 1 : 0;
+     return outputs;
+    }
+
+    const createUniqueID = row_ids => {
+      row_ids = Array.ids ? row_ids : [];
+      let generated;
+      while (!generated || row_ids.includes(generated)) {
+          generated = generateRowID();
+      }
+      row_ids.push(generated);
+      return generated;
+    }
+    on('sheet:opened', () =>{
+    });
+
+    {{{{noop}}}}
+    function uuidv4() {
+    return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
+      (+c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> +c / 4).toString(16)
+    )};
+
+    const attributes = ['str', 'dex', 'vit', 'int', 'mnd']
+    attributes.forEach(attribute => {
+      on(`clicked:${attribute}`, () => {
+        const name = attribute.toUpperCase()
+        startRoll(`&{template:default} {{name=${name} Roll}} {{${attribute}=[[@{${attribute}}]]}} {{roll=[[1d20+@{${attribute}}]]}}`, roll => {
+          finishRoll(roll.rollId);
+        });
+      });
+    });
+    const secondaryAttributes = ['def', 'magdef', 'vig', 'speed']
+    secondaryAttributes.forEach(attribute => {
+      on(`clicked:${attribute}`, () => {
+        let display = '';
+        switch(attribute){
+          case 'def':
+            display = `Defense`;
+            break;
+          case 'magdef':
+            display = `Magic Defense`;
+            break;
+          case 'vig':
+            display = `Vigilance`;
+            break;
+          case 'speed':
+            display = `Speed`;
+            break;
+          default:
+            return;
+        }
+        startRoll(`&{template:default} {{name=${display}}} {{${display}=[[@{${attribute}}]]}}`, roll => {
+          finishRoll(roll.rollId);
+        });
+      });
+    });
+    const buttons = ['test'];
+    on('change:character_name sheet:opened', () => {
+     getAttrs(['character_name'], values => {
+       const name = values.character_name;
+       const output = {};
+       buttons.forEach(button => {
+           output[`${button}_attribute`] = `~${name}|${button}`;
+       });
+       setAttrs(output);
+     });
+    });
+    on(`clicked:maxmp`, ()=>{
+      startRoll(`&{template:default} {{name=MP}} {{Max=[[@{maxmp}]]}} {{Current=[[@{currentmp}]]}}`, roll => {
+          finishRoll(roll.rollId);
+      });
+    });
+    on(`clicked:maxhp`, ()=>{
+      startRoll(`&{template:default} {{name=HP}} {{Max=[[@{maxhp}]]}} {{Current=[[@{currenthp}]]}} {{Barrier=[[@{currentbarrier}]]}}`, roll => {
+          finishRoll(roll.rollId);
+      });
+    });
+    on("clicked:repeating_effects:roll", (event) => {
+        const rowid = event.sourceAttribute.split('_')[2];
+        getAttrs([section_attribute('effects', rowid, 'value'), 'level'], (values) => {
+            const currentLevel = values.level;
+            const effectObj = effects.filter(x=>x.value === values[`${section_attribute('effects', rowid, 'value')}`])[0]
+            if(effectObj){
+              const leveledEffect = get_leveled_obj(values.level, effectObj.levels);
+              const description = leveledEffect.baseEffect.desc;
+              const title = effectObj.name;
+              const template = `&{template:effect} {{title=${title}}} {{desc=${description}}}`;
+              startRoll(template, (results) => {
+            finishRoll(
+                results.rollId
+            );
+        });
+            }
+        });
+    });
+
+     on("clicked:limitroll", (event) => {
+    // Check the current value of the hidden attribute.
+        getAttrs([...attributes, 'limit-value', 'level', 'character_name'], (values) => {
+           const currentLevel = values.level;
+           const ability = limitBreaks.filter(x=>x.value === values['limit-value'])[0]
+           const leveledAbility = get_leveled_obj(values.level, ability.levels);
+           const name = ability.name ?? '';
+           const tags = ability.tags?.join(', ') ?? '';
+           const target = leveledAbility?.target ?? '';
+           const range = leveledAbility?.range ?? '';
+           const cost = leveledAbility?.cost ? leveledAbility?.cost : '';
+           const trigger = leveledAbility?.trigger ? leveledAbility?.trigger : '';
+           const attribute = leveledAbility?.check?.toLowerCase();
+           const checkRoll = attribute == 'special' ? '[[1d20]]' : attribute ?  `[[1d20+@{${attribute}}]]` : '';
+           const check =  leveledAbility?.check ? `${leveledAbility?.check} (d20+${values[attribute]})` : '';
+           const cr = leveledAbility?.cr ?  `Target's ${leveledAbility?.cr == 'Defense' ? 'Defense' : 'Magic Defense'}` : '';
+           const baseEffectDesc = leveledAbility?.baseEffect?.desc ?? '';
+           const baseDice = leveledAbility?.baseEffect?.dice ? leveledAbility?.baseEffect?.dice : 0;
+           const baseFlat = leveledAbility?.baseEffect?.flat ? leveledAbility?.baseEffect?.flat : 0;
+           const directDice = leveledAbility?.directHit?.dice ? leveledAbility?.directHit?.dice : 0;
+           const directFlat = leveledAbility?.directHit?.flat ? leveledAbility?.directHit?.flat : 0;
+           const baseEffectDamage = (!baseDice && !baseFlat) ? '' : (baseDice) ? `[[${baseDice}d6+${baseFlat}]]` : `[[${baseFlat}]]` ;
+           const directHitDamage =  (baseDice || directDice) ? `[[${baseDice+directDice}d6+${baseFlat+directFlat}]]` : `[[${baseFlat}]]`;
+           const critHitDamage =  (baseDice || directDice ) ? `[[${(baseDice+directDice)*2}d6+${baseFlat+directFlat}]]` : `[[${baseFlat+directFlat}]]`;
+           const directHitDesc= leveledAbility?.directHit?.desc ?? '';
+           const limitation = leveledAbility?.limitation ?? '';
+           const showLimitation = leveledAbility?.limitation ? true : false;
+           const comboOptions = getComboOptions(leveledAbility, currentLevel);
+           let hasComboOptionOne;
+           let comboOptionOneName;
+           let comboOptionOneValue;
+           let comboOneAct;
+           let comboTwoAct;
+           let hasComboOptionTwo;
+           let comboOptionTwoName;
+           let comboOptionTwoValue;
+
+           if(comboOptions.length > 0){
+             for(let i=0; i< comboOptions.length; i++){
+               if(i==0){
+                 hasComboOptionOne = true;
+                 comboOneAct = section_attribute('primary-abilities', rowid, 'combo-one')
+                 comboOptionOneName = comboOptions[i].name
+                 comboOptionOneValue = comboOptions[i].value
+               }
+               else if(i==1){
+                 hasComboOptionTwo = true;
+                 comboOptionTwoName = comboOptions[i].name
+                 comboOptionTwoValue = comboOptions[i].value
+                 comboTwoAct = section_attribute('primary-abilities', rowid, 'combo-two')
+               }
+             }
+           }
+           const template = `&{template:primary-ability} {{currentLevel=${currentLevel}}} {{tags=${tags}}} {{target=${target}}} {{range=${range}}} {{attribute=${leveledAbility?.check}}} {{checkRoll=${checkRoll}}} {{cr=${cr}}} {{baseEffectDesc=${baseEffectDesc}}} {{baseEffectDamage=${baseEffectDamage}}} {{directHitDamage=${directHitDamage}}} {{critHitDamage=${critHitDamage}}} {{directHitDesc=${directHitDesc}}} ${showLimitation ? `{{limitation=${limitation}}}` : ''} {{name=${name}}} ${hasComboOptionOne ? `{{comboOptionOneName=${comboOptionOneName}}} {{comboOptionOneValue=${comboOptionOneValue}}}` : ''} ${hasComboOptionTwo ? `{{comboOptionTwoName=${comboOptionTwoName}}} {{comboOptionTwoValue=${comboOptionTwoValue}}}` : ''} {{comboOneAct=${`~${values.character_name}|${comboOneAct}`}}} {{comboTwoAct=${`~${values.character_name}|${comboTwoAct}`}}} {{cost=${cost}}} {{trigger=${trigger}}}`;
+           startRoll(template, (results) => {
+             finishRoll(
+                 results.rollId
+             );
+           });
+        });
+    });
+     on("clicked:repeating_instant-abilities:roll", (event) => {
+    // Check the current value of the hidden attribute.
+        const rowid = event.sourceAttribute.split('_')[2];
+        getAttrs([...attributes, section_attribute('instant-abilities', rowid, 'value'), 'level', 'character_name'], (values) => {
+           const currentLevel = values.level;
+           const ability = instantAbilities.filter(x=>x.value === values[`${section_attribute('instant-abilities', rowid, 'value')}`])[0]
+           const leveledAbility = get_leveled_obj(values.level, ability.levels);
+           const name = ability.name ?? '';
+           const tags = ability.tags?.join(', ') ?? '';
+           const target = leveledAbility?.target ?? '';
+           const range = leveledAbility?.range ?? '';
+           const cost = leveledAbility?.cost ? leveledAbility?.cost : '';
+           const trigger = leveledAbility?.trigger ? leveledAbility?.trigger : '';
+           const attribute = leveledAbility?.check?.toLowerCase();
+           const checkRoll = attribute == 'special' ? '[[1d20]]' : attribute ?  `[[1d20+@{${attribute}}]]` : '';
+           const check =  leveledAbility?.check ? `${leveledAbility?.check} (d20+${values[attribute]})` : '';
+           const cr = leveledAbility?.cr ?  `Target's ${leveledAbility?.cr == 'Defense' ? 'Defense' : 'Magic Defense'}` : '';
+           const baseEffectDesc = leveledAbility?.baseEffect?.desc ?? '';
+           const baseDice = leveledAbility?.baseEffect?.dice ? leveledAbility?.baseEffect?.dice : 0;
+           const baseFlat = leveledAbility?.baseEffect?.flat ? leveledAbility?.baseEffect?.flat : 0;
+           const directDice = leveledAbility?.directHit?.dice ? leveledAbility?.directHit?.dice : 0;
+           const directFlat = leveledAbility?.directHit?.flat ? leveledAbility?.directHit?.flat : 0;
+           const baseEffectDamage = (!baseDice && !baseFlat) ? '' : (baseDice) ? `[[${baseDice}d6+${baseFlat}]]` : `[[${baseFlat}]]` ;
+           const directHitDamage =  (baseDice || directDice) ? `[[${baseDice+directDice}d6+${baseFlat+directFlat}]]` : `[[${baseFlat}]]`;
+           const critHitDamage =  (baseDice || directDice ) ? `[[${(baseDice+directDice)*2}d6+${baseFlat+directFlat}]]` : `[[${baseFlat+directFlat}]]`;
+           const directHitDesc= leveledAbility?.directHit?.desc ?? '';
+           const limitation = leveledAbility?.limitation ?? '';
+           const showLimitation = leveledAbility?.limitation ? true : false;
+           const comboOptions = getComboOptions(leveledAbility, currentLevel);
+           let hasComboOptionOne;
+           let comboOptionOneName;
+           let comboOptionOneValue;
+           let comboOneAct;
+           let comboTwoAct;
+           let hasComboOptionTwo;
+           let comboOptionTwoName;
+           let comboOptionTwoValue;
+
+           if(comboOptions.length > 0){
+             for(let i=0; i< comboOptions.length; i++){
+               if(i==0){
+                 hasComboOptionOne = true;
+                 comboOneAct = section_attribute('primary-abilities', rowid, 'combo-one')
+                 comboOptionOneName = comboOptions[i].name
+                 comboOptionOneValue = comboOptions[i].value
+               }
+               else if(i==1){
+                 hasComboOptionTwo = true;
+                 comboOptionTwoName = comboOptions[i].name
+                 comboOptionTwoValue = comboOptions[i].value
+                 comboTwoAct = section_attribute('primary-abilities', rowid, 'combo-two')
+               }
+             }
+           }
+           const template = `&{template:primary-ability} {{currentLevel=${currentLevel}}} {{tags=${tags}}} {{target=${target}}} {{range=${range}}} {{attribute=${leveledAbility?.check}}} {{checkRoll=${checkRoll}}} {{cr=${cr}}} {{baseEffectDesc=${baseEffectDesc}}} {{baseEffectDamage=${baseEffectDamage}}} {{directHitDamage=${directHitDamage}}} {{critHitDamage=${critHitDamage}}} {{directHitDesc=${directHitDesc}}} ${showLimitation ? `{{limitation=${limitation}}}` : ''} {{name=${name}}} ${hasComboOptionOne ? `{{comboOptionOneName=${comboOptionOneName}}} {{comboOptionOneValue=${comboOptionOneValue}}}` : ''} ${hasComboOptionTwo ? `{{comboOptionTwoName=${comboOptionTwoName}}} {{comboOptionTwoValue=${comboOptionTwoValue}}}` : ''} {{comboOneAct=${`~${values.character_name}|${comboOneAct}`}}} {{comboTwoAct=${`~${values.character_name}|${comboTwoAct}`}}} {{cost=${cost}}} {{trigger=${trigger}}}`;
+           startRoll(template, (results) => {
+             finishRoll(
+                 results.rollId
+             );
+           });
+        });
+    });
+     on("clicked:repeating_secondary-abilities:roll", (event) => {
+    // Check the current value of the hidden attribute.
+        const rowid = event.sourceAttribute.split('_')[2];
+        getAttrs([...attributes, section_attribute('secondary-abilities', rowid, 'value'), 'level', 'character_name'], (values) => {
+           const currentLevel = values.level;
+           const ability = secondaryAbilities.filter(x=>x.value === values[`${section_attribute('secondary-abilities', rowid, 'value')}`])[0]
+           const leveledAbility = get_leveled_obj(values.level, ability.levels);
+           const name = ability.name ?? '';
+           const tags = ability.tags?.join(', ') ?? '';
+           const target = leveledAbility?.target ?? '';
+           const range = leveledAbility?.range ?? '';
+           const cost = leveledAbility?.cost ? leveledAbility?.cost : '';
+           const trigger = leveledAbility?.trigger ? leveledAbility?.trigger : '';
+           const attribute = leveledAbility?.check?.toLowerCase();
+           const checkRoll = attribute == 'special' ? '[[1d20]]' : attribute ?  `[[1d20+@{${attribute}}]]` : '';
+           const check =  leveledAbility?.check ? `${leveledAbility?.check} (d20+${values[attribute]})` : '';
+           const cr = leveledAbility?.cr ?  `Target's ${leveledAbility?.cr == 'Defense' ? 'Defense' : 'Magic Defense'}` : '';
+           const baseEffectDesc = leveledAbility?.baseEffect?.desc ?? '';
+           const baseDice = leveledAbility?.baseEffect?.dice ? leveledAbility?.baseEffect?.dice : 0;
+           const baseFlat = leveledAbility?.baseEffect?.flat ? leveledAbility?.baseEffect?.flat : 0;
+           const directDice = leveledAbility?.directHit?.dice ? leveledAbility?.directHit?.dice : 0;
+           const directFlat = leveledAbility?.directHit?.flat ? leveledAbility?.directHit?.flat : 0;
+           const baseEffectDamage = (!baseDice && !baseFlat) ? '' : (baseDice) ? `[[${baseDice}d6+${baseFlat}]]` : `[[${baseFlat}]]` ;
+           const directHitDamage =  (baseDice || directDice) ? `[[${baseDice+directDice}d6+${baseFlat+directFlat}]]` : `[[${baseFlat}]]`;
+           const critHitDamage =  (baseDice || directDice ) ? `[[${(baseDice+directDice)*2}d6+${baseFlat+directFlat}]]` : `[[${baseFlat+directFlat}]]`;
+           const directHitDesc= leveledAbility?.directHit?.desc ?? '';
+           const limitation = leveledAbility?.limitation ?? '';
+           const showLimitation = leveledAbility?.limitation ? true : false;
+           const comboOptions = getComboOptions(leveledAbility, currentLevel);
+           let hasComboOptionOne;
+           let comboOptionOneName;
+           let comboOptionOneValue;
+           let comboOneAct;
+           let comboTwoAct;
+           let hasComboOptionTwo;
+           let comboOptionTwoName;
+           let comboOptionTwoValue;
+
+           if(comboOptions.length > 0){
+             for(let i=0; i< comboOptions.length; i++){
+               if(i==0){
+                 hasComboOptionOne = true;
+                 comboOneAct = section_attribute('primary-abilities', rowid, 'combo-one')
+                 comboOptionOneName = comboOptions[i].name
+                 comboOptionOneValue = comboOptions[i].value
+               }
+               else if(i==1){
+                 hasComboOptionTwo = true;
+                 comboOptionTwoName = comboOptions[i].name
+                 comboOptionTwoValue = comboOptions[i].value
+                 comboTwoAct = section_attribute('primary-abilities', rowid, 'combo-two')
+               }
+             }
+           }
+           const template = `&{template:primary-ability} {{currentLevel=${currentLevel}}} {{tags=${tags}}} {{target=${target}}} {{range=${range}}} {{attribute=${leveledAbility?.check}}} {{checkRoll=${checkRoll}}} {{cr=${cr}}} {{baseEffectDesc=${baseEffectDesc}}} {{baseEffectDamage=${baseEffectDamage}}} {{directHitDamage=${directHitDamage}}} {{critHitDamage=${critHitDamage}}} {{directHitDesc=${directHitDesc}}} ${showLimitation ? `{{limitation=${limitation}}}` : ''} {{name=${name}}} ${hasComboOptionOne ? `{{comboOptionOneName=${comboOptionOneName}}} {{comboOptionOneValue=${comboOptionOneValue}}}` : ''} ${hasComboOptionTwo ? `{{comboOptionTwoName=${comboOptionTwoName}}} {{comboOptionTwoValue=${comboOptionTwoValue}}}` : ''} {{comboOneAct=${`~${values.character_name}|${comboOneAct}`}}} {{comboTwoAct=${`~${values.character_name}|${comboTwoAct}`}}} {{cost=${cost}}} {{trigger=${trigger}}}`;
+           startRoll(template, (results) => {
+             finishRoll(
+                 results.rollId
+             );
+           });
+        });
+    });
+    on("clicked:repeating_primary-abilities:roll", (event) => {
+    // Check the current value of the hidden attribute.
+        const rowid = event.sourceAttribute.split('_')[2];
+        getAttrs([...attributes, section_attribute('primary-abilities', rowid, 'value'), 'level', 'character_name'], (values) => {
+           const currentLevel = values.level;
+           const ability = primaryAbilities.filter(x=>x.value === values[`${section_attribute('primary-abilities', rowid, 'value')}`])[0]
+           const leveledAbility = get_leveled_obj(values.level, ability.levels);
+           const name = ability.name ?? '';
+           const tags = ability.tags?.join(', ') ?? '';
+           const target = leveledAbility?.target ?? '';
+           const range = leveledAbility?.range ?? '';
+           const cost = leveledAbility?.cost ? leveledAbility?.cost : '';
+           const trigger = leveledAbility?.trigger ? leveledAbility?.trigger : '';
+           const attribute = leveledAbility?.check?.toLowerCase();
+           const checkRoll = attribute == 'special' ? '[[1d20]]' : attribute ?  `[[1d20+@{${attribute}}]]` : '';
+           const check =  leveledAbility?.check ? `${leveledAbility?.check} (d20+${values[attribute]})` : '';
+           const cr = leveledAbility?.cr ?  `Target's ${leveledAbility?.cr == 'Defense' ? 'Defense' : 'Magic Defense'}` : '';
+           const baseEffectDesc = leveledAbility?.baseEffect?.desc ?? '';
+           const baseDice = leveledAbility?.baseEffect?.dice ? leveledAbility?.baseEffect?.dice : 0;
+           const baseFlat = leveledAbility?.baseEffect?.flat ? leveledAbility?.baseEffect?.flat : 0;
+           const directDice = leveledAbility?.directHit?.dice ? leveledAbility?.directHit?.dice : 0;
+           const directFlat = leveledAbility?.directHit?.flat ? leveledAbility?.directHit?.flat : 0;
+           const baseEffectDamage = (!baseDice && !baseFlat) ? '' : (baseDice) ? `[[${baseDice}d6+${baseFlat}]]` : `[[${baseFlat}]]` ;
+           const directHitDamage =  (baseDice || directDice) ? `[[${baseDice+directDice}d6+${baseFlat+directFlat}]]` : `[[${baseFlat}]]`;
+           const critHitDamage =  (baseDice || directDice ) ? `[[${(baseDice+directDice)*2}d6+${baseFlat+directFlat}]]` : `[[${baseFlat+directFlat}]]`;
+           const directHitDesc= leveledAbility?.directHit?.desc ?? '';
+           const limitation = leveledAbility?.limitation ?? '';
+           const showLimitation = leveledAbility?.limitation ? true : false;
+           const comboOptions = getComboOptions(leveledAbility, currentLevel);
+           let hasComboOptionOne;
+           let comboOptionOneName;
+           let comboOptionOneValue;
+           let comboOneAct;
+           let comboTwoAct;
+           let hasComboOptionTwo;
+           let comboOptionTwoName;
+           let comboOptionTwoValue;
+
+           if(comboOptions.length > 0){
+             for(let i=0; i< comboOptions.length; i++){
+               if(i==0){
+                 hasComboOptionOne = true;
+                 comboOneAct = section_attribute('primary-abilities', rowid, 'combo-one')
+                 comboOptionOneName = comboOptions[i].name
+                 comboOptionOneValue = comboOptions[i].value
+               }
+               else if(i==1){
+                 hasComboOptionTwo = true;
+                 comboOptionTwoName = comboOptions[i].name
+                 comboOptionTwoValue = comboOptions[i].value
+                 comboTwoAct = section_attribute('primary-abilities', rowid, 'combo-two')
+               }
+             }
+           }
+           const template = `&{template:primary-ability} {{currentLevel=${currentLevel}}} {{tags=${tags}}} {{target=${target}}} {{range=${range}}} {{attribute=${leveledAbility?.check}}} {{checkRoll=${checkRoll}}} {{cr=${cr}}} {{baseEffectDesc=${baseEffectDesc}}} {{baseEffectDamage=${baseEffectDamage}}} {{directHitDamage=${directHitDamage}}} {{critHitDamage=${critHitDamage}}} {{directHitDesc=${directHitDesc}}} ${showLimitation ? `{{limitation=${limitation}}}` : ''} {{name=${name}}} ${hasComboOptionOne ? `{{comboOptionOneName=${comboOptionOneName}}} {{comboOptionOneValue=${comboOptionOneValue}}}` : ''} ${hasComboOptionTwo ? `{{comboOptionTwoName=${comboOptionTwoName}}} {{comboOptionTwoValue=${comboOptionTwoValue}}}` : ''} {{comboOneAct=${`~${values.character_name}|${comboOneAct}`}}} {{comboTwoAct=${`~${values.character_name}|${comboTwoAct}`}}} {{cost=${cost}}} {{trigger=${trigger}}}`;
+           startRoll(template, (results) => {
+             finishRoll(
+                 results.rollId
+             );
+           });
+        });
+    });
+    const fireComboAction = (index, rowid)=>{
+    getAttrs([...attributes, section_attribute('primary-abilities', rowid, 'value'), 'level', 'character_name'], (values) => {
+           const currentLevel = values.level;
+           const ability = primaryAbilities.filter(x=>x.value === values[`${section_attribute('primary-abilities', rowid, 'value')}`])[0]
+           const leveledAbility = get_leveled_obj(values.level, ability.levels);
+           const comboAbility = getComboOptions(leveledAbility, currentLevel)[index];
+           const leveledComboAbility = get_leveled_obj(values.level, comboAbility.levels);
+
+           const name = comboAbility.name;
+           const tags = comboAbility.tags?.join(', ');
+           const target = leveledComboAbility.target;
+           const range = `${leveledComboAbility.range} square(s)`;
+           const attribute = leveledComboAbility.check.toLowerCase();
+           const checkRoll = `[[1d20+@{${attribute}}]]`
+           const check = `${leveledComboAbility.check} (d20+${values[attribute]})`;
+           const cr = `Target's ${leveledComboAbility.cr == 'def' ? 'Defense' : 'Magic Defense'}`;
+           const baseEffectDesc = leveledComboAbility.baseEffect?.desc;
+           const baseDice = leveledComboAbility.baseEffect?.dice ? leveledComboAbility.baseEffect?.dice : 0;
+           const baseFlat = leveledComboAbility.baseEffect?.flat ? leveledComboAbility.baseEffect?.flat : 0;
+           const directDice = leveledComboAbility.directHit?.dice ? leveledComboAbility.directHit?.dice : 0;
+           const directFlat = leveledComboAbility.directHit?.flat ? leveledComboAbility.directHit?.flat : 0;
+           const baseEffectDamage = baseDice ? `[[${baseDice}d6+${baseFlat}]]` : `[[${baseFlat}]]` ;
+           const directHitDamage =  (baseDice || directDice) ? `[[${baseDice+directDice}d6+${baseFlat+directFlat}]]` : `[[${baseFlat}]]`;
+           const critHitDamage =  (baseDice || directDice ) ? `[[${(baseDice+directDice)*2}d6+${baseFlat+directFlat}]]` : `[[${baseFlat+directFlat}]]`;
+           const directHitDesc= leveledComboAbility.directHit?.desc;
+           const limitation = leveledComboAbility.limitation;
+           const showLimitation = leveledComboAbility.limitation ? true : false;
+           const template = `&{template:primary-ability} {{currentLevel=${currentLevel}}} {{tags=${tags}}} {{target=${target}}} {{range=${range}}} {{attribute=${leveledAbility?.check}}} {{checkRoll=${checkRoll}}} {{cr=${cr}}} {{baseEffectDesc=${baseEffectDesc}}} {{baseEffectDamage=${baseEffectDamage}}} {{directHitDamage=${directHitDamage}}} {{critHitDamage=${critHitDamage}}} {{directHitDesc=${directHitDesc}}} ${showLimitation ? `{{limitation=${limitation}}}` : ''} {{name=${name}}}`;
+           startRoll(template, (results) => {
+             finishRoll(
+                 results.rollId
+             );
+           });
+        });
+    }
+    on("clicked:repeating_primary-abilities:combo-one", (event) => {
+    // Check the current value of the hidden attribute.
+        const rowid = event.sourceAttribute.split('_')[2];
+       fireComboAction(0,rowid)
+     });
+    on("clicked:repeating_primary-abilities:combo-two", (event) => {
+    // Check the current value of the hidden attribute.
+        const rowid = event.sourceAttribute.split('_')[2];
+       fireComboAction(1,rowid)
+     });
+    {{{{/noop}}}}
+    {{!-- START SECTION: 'TOGGLES FOR EDITING SECTIONS' --}}
+    on('clicked:edit_race', () => {
+      toggle_attribute('edit_race');
+    });
+     on('clicked:edit_job', () => {
+      toggle_attribute('edit_job');
+    });
+    on('clicked:edit_attributes', () => {
+      toggle_attribute('edit_attributes');
+    });
+    on('clicked:edit_effects', () => {
+      toggle_attribute('edit_effects');
+    });
+    {{!-- END SECTION: 'TOGGLES FOR EDITING SECTIONS' --}}
+
+    {{!-- START SECTION: 'WORKERS FOR SETTING RELATED VALUES' --}}
+     on('change:level change:job sheet:open', () => {
+       // remove existing abilites TODO: check for custom added ones
+       getSectionIDs("repeating_primary-abilities", (primaryAbilityIds) => {
+         for (var i = 0; i < primaryAbilityIds.length; i++) {
+           removeRepeatingRow("repeating_primary-abilities_" + primaryAbilityIds[i]);
+         }
+         getSectionIDs("repeating_secondary-abilities", (secondaryAbilityIds) => {
+           for (var i = 0; i < secondaryAbilityIds.length; i++) {
+             removeRepeatingRow("repeating_secondary-abilities_" + secondaryAbilityIds[i]);
+           }
+           getSectionIDs("repeating_instant-abilities", (instantAbilityIds) => {
+             for (var i = 0; i < instantAbilityIds.length; i++) {
+               removeRepeatingRow("repeating_instant-abilities_" + instantAbilityIds[i]);
+             }
+             getSectionIDs("repeating_effects", (effectIds) => {
+               for (var i = 0; i < effectIds.length; i++) {
+                 removeRepeatingRow("repeating_effects_" + effectIds[i]);
+               }
+               getAttrs([...attributes, 'level', 'job'], values => {
+                 const primaryAbilitiesToAdd = [];
+                 primaryAbilities.forEach(ability => {
+                   if (ability.job.includes(values.job) && (!("levels") in ability || has_level(ability?.levels, values['level'] ))) {
+                     primaryAbilitiesToAdd.push(ability);
+                   }
+                 });
+                 const secondaryAbilitiesToAdd = [];
+                 secondaryAbilities.forEach(ability => {
+                   if (ability.job.includes(values.job) && (!("levels") in ability || has_level(ability?.levels, values['level'] ))) {
+                     secondaryAbilitiesToAdd.push(ability);
+                   }
+                 });
+                 const instantAbilitiesToAdd = [];
+                 instantAbilities.forEach(ability => {
+                   if (ability.job.includes(values.job) && (!("levels") in ability || has_level(ability?.levels, values['level'] ))) {
+                     instantAbilitiesToAdd.push(ability);
+                   }
+                 });
+                 const effectsToAdd = [];
+                 effects.forEach(ability => {
+                   if (ability.job.includes(values.job) && (!("levels") in ability || has_level(ability?.levels, values['level'] ))) {
+                     effectsToAdd.push(ability);
+                   }
+                 });
+                 const newIds = [];
+                 let outputs = {};
+                  const limitBreak = limitBreaks.filter(x=>x.job.includes(values.job))[0];
+                 if(limitBreak){
+                    const leveledLimit = get_leveled_obj(values.level, limitBreak.levels);
+                   const limitOutputs = getAbilityOutputs(values.level, limitBreak, 'limit-', values);
+                   outputs = {...outputs,...limitOutputs}
+                 }
+                 primaryAbilitiesToAdd.forEach(ability => {
+                   const newId = generateRowID(newIds);
+                   const leveledAbility = get_leveled_obj(values.level, ability.levels);
+                   const newOutputs = getAbilityOutputs(values.level, ability, section_attribute('primary-abilities', newId, ''), values);
+                   outputs = {
+                     ...outputs,
+                     ...newOutputs
+                   };
+                   const comboOptions = getComboOptions(leveledAbility, values.level)
+                   if (comboOptions.length > 0) {
+                     for (i = 0; i < comboOptions.length; i++) {
+                       let comboOutputs = {};
+                       if (i == 0) {
+                         comboOutputs[`${section_attribute('primary-abilities',newId,'combo-one')}`] = 1;
+                         const newComboOutputs = getAbilityOutputs(values.level, comboOptions[i], `${section_attribute('primary-abilities',newId,'combo-one')}`, values);
+                         comboOutputs = {
+                           ...comboOutputs,
+                           ...newComboOutputs
+                         };
+                       } else if (i == 1) {
+                         comboOutputs[`${section_attribute('primary-abilities',newId,'combo-two')}`] = 1;
+                         const newComboOutputs = getAbilityOutputs(values.level, comboOptions[i], `${section_attribute('primary-abilities',newId,'combo-two')}`, values);
+                         comboOutputs = {
+                           ...comboOutputs,
+                           ...newComboOutputs
+                         };
+                       }
+                       outputs = {
+                         ...outputs,
+                         ...comboOutputs
+                       }
+                     }
+                   }
+                 })
+                 secondaryAbilitiesToAdd.forEach(ability => {
+                   const newId = generateRowID(newIds);
+                   const leveledAbility = get_leveled_obj(values.level, ability.levels);
+                   const newOutputs = getAbilityOutputs(values.level, ability, section_attribute('secondary-abilities', newId, ''), values);
+                   outputs = {
+                     ...outputs,
+                     ...newOutputs
+                   };
+                 });
+                 instantAbilitiesToAdd.forEach(ability => {
+                   const newId = generateRowID(newIds);
+                   const leveledAbility = get_leveled_obj(values.level, ability.levels);
+                   const newOutputs = getAbilityOutputs(values.level, ability, section_attribute('instant-abilities', newId, ''), values);
+                   outputs = {
+                     ...outputs,
+                     ...newOutputs
+                   };
+                 });
+                 effectsToAdd.forEach(ability => {
+                   const newId = generateRowID(newIds);
+                   const leveledAbility = get_leveled_obj(values.level, ability.levels);
+                   const newOutputs = getAbilityOutputs(values.level, ability, section_attribute('effects', newId, ''), values);
+                   outputs = {
+                     ...outputs,
+                     ...newOutputs
+                   };
+                 });
+                 setAttrs(outputs);
+               });
+             });
+           });
+         });
+       });
+     });
+    on('change:repeating_effects remove:repeating_effects change:edit_effects change:level', () => {
+      getSectionIDs('repeating_effects', (ids) => {
+          const currentEffects = [];
+          ids.forEach( (id) => {
+            const effectToUpdate = section_attribute('effects', id, 'effect');
+            currentEffects.push(effectToUpdate)
+          });
+          getAttrs([...currentEffects, 'edit_effects', 'level'], values => {
+              const currentLevel = values.level;
+              const lvlobj = levels.filter(x=>x.value === currentLevel)[0];
+              const outputs = {};
+              ids.forEach( id => {
+                const effectObj = effects.filter(x=>x.value === values[`${section_attribute('effects', id, 'effect')}`])[0]
+                if(effectObj){
+                  const leveledEffect = get_leveled_obj(values.level, effectObj.levels);
+                  outputs[`${section_attribute('effects', id, 'description')}`] = leveledEffect.description;
+                  outputs[`${section_attribute('effects', id, 'edit')}`] = values.edit_effects;
+                  outputs[`${section_attribute('effects', id, 'name')}`] = effectObj.name;
+                  if(effectObj.tags){
+                    outputs[`${section_attribute('effects', id, 'tags')}`] = effectObj.tags.join(', ');
+                  }
+                }
+              });
+              setAttrs(outputs);
+            });
+        });
+      });
+      getAttrs(['edit_effects', 'level', 'job'], function(parentValues) {
+        const currentLevel = parentValues.level;
+        const currentJob = parentValues.job;
+
+    });
+    {{!-- END SECTION: 'WORKERS FOR SETTING RELATED VALUES' --}}
+    on('change:currenthp', () => {
+      getAttrs(['currenthp', 'maxhp'], function(values) {
+        if(values.currenthp > values.maxhp){
+          setAttrs({
+            currenthp: values.maxhp
+          });
+        }
+     });
+    });
+    on('change:currentmp', () => {
+    getAttrs(['currentmp', 'maxmp'], function(values) {
+      if(values.currentmp > values.maxmp){
+        setAttrs({
+          currentmp: values.maxmp
+        });
+      }
+    });
+    });
+
+    on('change:edit_effects', () => {
+    getAttrs(['edit_effects'], function(values) {
+      getSectionIDs('repeating_effects', function(ids) {
+        ids.forEach(function(id) {
+          const outputs = { };
+            outputs[`${section_attribute('traits', id, 'edit')}`] =values.edit_effects;
+            setAttrs(outputs);
+        });
+      });
+    });
+    });
+</script>
